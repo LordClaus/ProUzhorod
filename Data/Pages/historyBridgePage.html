@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анімація написання тексту</title>
+    <link rel="stylesheet" type="text/css" href="./pageStyles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const startButton = document.getElementById("startAnimation");
+            const animatedText = document.getElementById("animatedText");
+            const imageContainer = document.querySelector(".image-container");
+            const image1 = document.querySelector(".image-container img:nth-child(1)");
+            const image2 = document.querySelector(".image-container img:nth-child(2)");
+            const image3 = document.querySelector(".image-container img:nth-child(3)");
+            const textToAnimate1 = "Анімація тексту - це захоплююче!Анімація тексту - це захоплююче!Анімація тексту - це захоплююче!Анімація тексту - це захоплююче!Анімація тексту - це захоплююче!";
+            const textToAnimate2 = "Aboba !!! Aboba !!! Aboba !!! Aboba !!! Aboba !!! Aboba !!! Aboba !!! Aboba !!! Aboba !!!";
+
+            let index = 0;
+
+            startButton.addEventListener("click", function () {
+                startButton.style.display = "none"; // Ховаємо кнопку
+                animateText();
+                imageContainer.style.display = "block"; // Показуємо контейнер з зображеннями
+                image1.style.display = "block"; // Показуємо перше зображення
+                image2.style.display = "none"; // Ховаємо друге зображення
+                image3.style.display = "none"; // Ховаємо третє зображення
+            });
+
+            function addEventListener () {
+                animatedText.innerHTML = ""; // Очищаємо вміст тексту
+                image1.style.display = "none"; // Ховаємо перше зображення
+                image2.style.display = "block"; // Показуємо друге зображення
+            }
+
+            function animateText() {
+                if (index < textToAnimate.length) {
+                    animatedText.innerHTML += textToAnimate[index];
+                    index++;
+                    if (index % 60 === 0) {
+                        animatedText.innerHTML += "<br>";
+                    }
+                    setTimeout(animateText, 50); // Затримка між символами (в мілісекундах)
+                } else {
+                    addEventListener();
+                }
+            }
+
+            function animateText() {
+                if (index < textToAnimate.length) {
+                    animatedText.innerHTML += textToAnimate[index];
+                    index++;
+                    if (index % 60 === 0) {
+                        animatedText.innerHTML += "<br>";
+                    }
+                    setTimeout(animateText, 50); // Затримка між символами (в мілісекундах)
+                } else {
+                    addEventListener();
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+    <button id="startAnimation"></button>
+    <div class="text-container">
+        <p id="animatedText"></p>
+    </div>
+    <div class="image-container">
+        <img src="../Images/16.jpg">
+        <img src="../Images/17.jpg">
+        <img src="../Images/18.jpg">
+    </div>
+</body>
+</html>

@@ -1,0 +1,350 @@
+/* Стилі для body */
+.cont{
+    max-width: 1250px;
+    margin: 0 auto;
+    width: 100%;
+    margin: 5px;
+    padding: 0 20px;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none; /* Забрати підкреслення */
+    color: inherit; /* Змінити колір тексту на спадковий (залежить від батьківського елементу) */
+}
+
+/* Стилі для верхньої панелі навігації */
+
+.container-fluid{
+    position: relative;
+    z-index: 1;
+    background-color: #f0f0f0;
+    transition: transform 0.5s; /* Додайте плавність до зміни transform */
+}
+
+.container-fluid.scrolled {
+    transform: translateY(-220px); /* Початкова позиція поза екраном для плавного з'явлення */
+    transition: transform 0.5s ease; /* Додайте плавність до зміни transform */
+}
+
+
+/* Стилі для заголовка в шапці */
+.header {
+    color: #fff;
+    padding-top: 220px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Images/4.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 770px;
+}
+
+.header img {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+}
+
+.theme {
+    margin-left: 2%;
+    transition: transform 1.5s, opacity 1s; /* Додайте перехід для властивості transform */
+    animation: fadeOut 1s;
+}
+
+.theme.scrolled {
+    transform: translateX(-800px);
+    opacity: 0;
+}
+
+.paragraph{
+    margin-right: 1.3%;
+    margin-left: 1.3%;
+    padding: 20px;
+    font-size: 20px;
+    background-color: #f0f0f0;
+    background-size: cover;
+    margin-top: 5px; /* Відступи між контейнерами */
+    margin-bottom: 5px; /* Відступи між контейнерами */
+}
+
+/* Стилі для заголовка */
+h1 {
+    font-size: 36px;
+}
+
+.wrap {
+    display: flex;
+    position: relative;
+}
+
+/* Стилі для контейнера піктограм */
+.new-pictograms {
+    display: flex;
+    flex-wrap: wrap; /* Дозволяє обгортати рядки */
+    gap: 30px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Стилі для окремої піктограми */
+.new-pictogram {
+    flex-direction: row;
+    justify-content: flex-end; /* Текст центрується по правому краю */
+    align-items: center; /* Вертикальне вирівнювання тексту по центру */
+}
+
+.new-pictogram img {
+    max-width: 100%; /* Забороняємо фотографіям виходити за межі контейнерів по ширині */
+    max-height: 100%; /* Забороняємо фотографіям виходити за межі контейнерів по висоті */
+    display: block;
+}
+
+.new-pictogram p {
+    font-size: 20px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+    margin-top: -260px;
+    margin-left: 400px;
+    padding: 15px;
+    max-width: 400px;
+    position: absolute;
+    text-decoration: none;
+}
+
+.new-pictogram .p {
+    font-size: 20px;
+    text-align: right; /* Змініть це на "right", щоб текст центрувався справа */
+    background-color: #f6ff00;
+    color: rgb(0, 0, 0);
+    margin-top: -70px;
+    margin-left: 750px;
+    padding: 15px;
+    border-radius: 20px;
+    position: absolute;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.new-pictogram .p:hover {
+    transform: scale(1.05);
+}
+
+/* Стилі для контейнера змісту */
+.new-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px;
+    max-height: 250px;
+    background-color: #fff;
+    background-size: cover;
+    border-radius: 30px;
+    transition: all 0.3s;
+    flex-basis: 100%; /* 100% ширина для рядку */
+}
+
+.new-container:hover {
+    transform: scale(1.05);
+}
+
+/* Стилі для контейнера змісту */
+.bottom {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 100%;
+    max-height: 600px;
+    background-color: #f0f0f0;
+    background-size: cover;
+}
+
+.p {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    background-size: cover;
+    font-size: 20px;
+    margin-top: 5px; /* Відступи між контейнерами */
+    margin-bottom: 5px; /* Відступи між контейнерами */
+}
+
+/* Стилі для CTA-кнопки */
+a.cta-button {
+    background-color: none;
+    color: rgb(255, 255, 255);
+    padding: 6px;
+    border-color: #fff;
+    border-width: 5px;
+    border-style: solid;
+    position: absolute;
+    right: 19%;
+    text-decoration: none;
+    transition: all 0.3s;
+    top: 254px !important;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.map {
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.links{
+    height: 50px;
+    width: 150px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.links img{
+    max-width: 50px;
+    max-height: 50px;
+    padding: 10px;
+}
+
+.toggle-switch {
+    display: grid;
+    grid-template-columns: (2, f1);
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+  
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.toggle-label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+  
+.toggle-label::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 2px;
+    bottom: 2px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+  
+.toggle-switch input:checked + .toggle-label {
+    background-color: #f0f0f0;
+}
+  
+.toggle-switch input:checked + .toggle-label::before {
+    transform: translateX(30px);
+    background-color: black;
+}
+
+img{
+    width: 100%;
+}
+
+.bl1__list {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center; /* Розміщує елементи по горизонталі по центру */
+}
+
+.bl1 {
+    display: flex;
+    color: #000;
+}
+.bl1:nth-child(2n){
+        flex-direction: row-reverse;
+}
+@media (max-width: 815px) {
+    .bl1 {
+        flex-direction: row;
+        flex-wrap: wrap;          
+    }
+}
+.bl1__left {
+    width: 50%;
+    margin: 0 auto;
+}
+@media (max-width: 815px) {
+    .bl1__left {
+        width: 100%;
+    }
+}
+.bl1__img {
+    margin: 0 auto;
+}
+.bl1__right {
+    width: 60%;
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+.navi{
+    visibility: hidden;
+    display: none;
+}
+@media (max-width: 815px) {
+    .bl1__right {
+      margin: 0 auto;
+      width: 100%;
+      margin-top: 20px;
+    }
+    .navi{
+        visibility: visible;
+        width: 50px;
+        height: auto;
+        display: flex;
+    }
+}
+
+/* Стилі для темної теми */
+.dark-theme {
+    background-color: #111; /* Колір фону для темної теми */
+    color: #fff; /* Колір тексту для темної теми */
+}
+
+/* Змінюємо колір тексту та фону для елементів, де початковий колір #f0f0f0 або #fff */
+.dark-theme * {
+    color: #fff !important;
+}
+
+.dark-theme [style*="color: #f0f0f0"],
+.dark-theme [style*="color: #fff"],
+.dark-theme [style*="color: white"] {
+    color: #111 !important;
+}

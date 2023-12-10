@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Місто Ужгород</title>
+    <link rel="stylesheet" type="text/css" href="Data/styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const div = document.querySelector("div");
+            div.classList.remove("scrolled");
+            window.addEventListener("scroll", () => {
+                const div = document.querySelector("div");
+                const scrollPosition = window.scrollY;
+                if (scrollPosition > 100) {
+                    div.classList.add("scrolled");
+                } else {
+                    div.classList.remove("scrolled");
+                }
+            });
+            document.querySelector('a[href="#contact"]').addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector('#contact');
+                if (target) {
+                    const offset = target.getBoundingClientRect().top + window.scrollY - document.querySelector('nav').clientHeight;
+                    window.scrollTo({
+                        top: offset,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Data/Images/4.jpg'); background-size: cover; background-position: center; display: block; height: 550px; background-attachment: fixed;">
+    <nav>
+        <a href="Main.html"><img src="Data/Images/5.png" style="justify-self: baseline;" height="50px"></a>
+        <ul>
+            <li><a href="about.html">Про місто</a></li>
+            <li><a>Історія</a></li>
+            <li><a href="#contact">Контакти</a></li>
+            <li><a href="aboutUs.html">Про нас</a></li>
+        </ul>
+    </nav>
+    <header style="height: 200px; color: #fff; padding-top: 120px;">
+        <div class="scrolled">
+            <h1>Історії Ужгорода</h1>
+        </div>
+    </header>
+    
+    <section class="new-pictograms" id="about">
+        <div class="new-container">
+            <a href="Data/Pages/historyBridgePage.html" class="new-pictogram">
+                <img src="Data/Images/13.jpg">
+                <p>Ужгородський пішохідний міст, відомий також як "Міст Любові", колись був частиною більшого моста, який сполучав два береги річки Уж в Ужгороді.</p>
+                <p class="p">Пішохідний міст</p>
+            </a>
+        </div>
+        <div class="new-container">
+            <a href="Data/Pages/historyManPage.html" class="new-pictogram">
+                <img src="Data/Images/14.png">
+                <p>Ужгородський письменник та журналіст Олександр Гаврош не боїться неординарної зачіски в свої кільканадцять та вдало поєднує "словесні" професії.</p>
+                <p class="p">Олександр Гаврош</p>
+            </a>
+        </div>
+        <div class="new-container">
+            <a href="Data/Pages/historyCastlePage.html" class="new-pictogram">
+                <img src="Data/Images/8.jpg">
+                <p>Крім сакури та вина місто цікаве для туристів чудово збереженим замком та музеєм на його території.</p>
+                <p class="p">Ужгородський замок</p>
+            </a>
+        </div>
+    </section>
+    
+    <section class="contact" id="contact">
+        <div class="bottom">
+            <h2>Контакти</h2>
+            <p>Адреса: вул. Грушевського, 2, Ужгород, Україна</p>
+            <p>Телефон: +380 12 345 6789</p>
+            <p><a href="mailto:lizabelejkanic@gmail.com">Тисти тут, якщо хочеш написати нам</a></p>
+        </div>
+    </section>
+    <footer>
+        <div class="bottom">
+            <p>&copy; 2023 Місто Ужгород</p>
+        </div>
+    </footer>
+</body>
+</html>
