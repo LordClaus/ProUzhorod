@@ -35,7 +35,7 @@ a {
 }
 
 .container-fluid.scrolled {
-    transform: translateY(-220px); /* Початкова позиція поза екраном для плавного з'явлення */
+    transform: translateY(-250px); /* Початкова позиція поза екраном для плавного з'явлення */
     transition: transform 0.5s ease; /* Додайте плавність до зміни transform */
 }
 
