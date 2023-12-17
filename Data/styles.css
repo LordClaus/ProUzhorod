@@ -31,12 +31,12 @@ a {
     position: relative;
     z-index: 1;
     background-color: #f0f0f0;
-    transition: transform 0.5s; /* Додайте плавність до зміни transform */
+    transition: transform 0.5s; 
 }
 
 .container-fluid.scrolled {
     transform: translateY(-250px); /* Початкова позиція поза екраном для плавного з'явлення */
-    transition: transform 0.5s ease; /* Додайте плавність до зміни transform */
+    transition: transform 0.5s ease; 
 }
 
 
