@@ -83,6 +83,17 @@
                 }
             }
 
+            function updateLogoImage() {
+                const logoImage = document.getElementById('logo-image');
+                const isDarkTheme = document.body.classList.contains('dark-theme');
+
+                if (isDarkTheme) {
+                    logoImage.src = 'Data/Images/24.png';
+                } else {
+                    logoImage.src = 'Data/Images/25.png';
+                }
+            }
+
             toggleSwitch.addEventListener("change", function () {
                 if (this.checked) {
                     document.body.classList.add("dark-theme");
@@ -91,7 +102,20 @@
                     document.body.classList.remove("dark-theme");
                     localStorage.setItem("theme", "");
                 }
+
+                updateLogoImage();
             });
+
+            window.onload = function () {
+                const savedTheme = localStorage.getItem("theme");
+                if (savedTheme && savedTheme === "dark-theme") {
+                    document.body.classList.add("dark-theme");
+                    toggleSwitch.checked = true;
+                }
+
+                updateLogoImage();
+            };
+
         });
     </script>
 </head>
@@ -103,7 +127,7 @@
                 <svg class="bi me-2" width="40" height="32">
                     <use xlink:href="#bootstrap"></use>
                 </svg>
-                <img src="Data/Images/25.png" height="50px" class="d-inline-block align-text-top">
+                <img src="Data/Images/25.png" height="50px" id="logo-image" class="d-inline-block align-text-top">
                 <h2 class="m-0">ProUzhhorod</h2>
             </a>
             <ul class="nav nav-pills">
@@ -113,7 +137,6 @@
                 <li class="nav-item"><a class="nav-link text-dark" href="mapAirRade.html">Карта повітряних тривог</a>
                 </li>
                 <li class="nav-item"><a class="nav-link text-dark" href="#contact">Більше</a></li>
-                <li class="nav-item"><a class="nav-link text-dark" href="aboutUs.html">Про нас</a></li>
             </ul>
         </header>
     </div>
@@ -126,150 +149,164 @@
         </div>
     </header>
 
-    <div class="container marketing">
-        <hr class="featurette-divider">
+    <main class="container">
+        <div class="container marketing">
+            <hr class="featurette-divider">
 
-        <div id="about" class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">Про місто</h2>
-                <p class="lead"><b>Ужгород -</b> захоплююче місто, розташоване на заході України, прикордонне з
-                    чотирма країнами: Словаччиною, Польщею, Угорщиною та Румунією. Його багатий
-                    історичний спадок і мультикультурний спирит додають особливий колорит цьому місцю.
-                    Ужгород славиться своєю унікальною архітектурою, різноманітністю культурних звичаїв
-                    та традицій, а також природною красою, яка оточує його з усіх сторін. Місто пропонує
-                    гостям і мешканцям незабутні враження, завдяки своїм пам'ятникам історії, сучасним
-                    розвагам і гостинності свого народу. Однією з головних архітектурних пам'яток міста є Ужгородський
-                    замок, який датується 9 століттям і є одним
-                    із найстаріших замків на території України. Замок має унікальну архітектуру та розташований на
-                    березі
-                    річки Уж, надаючи йому заворожливий вигляд. Місто також славиться своєю музичною та художньою
-                    спадщиною. В Ужгороді можна знайти численні музеї,
-                    галереї, театри та фестивалі, що відображають різні аспекти культури і мистецтва. Загалом, Ужгород -
-                    це чарівне місто, яке поєднує історію, культуру і природу, створюючи унікальну
-                    атмосферу для тих, хто відвідує його.</p>
+            <div id="about" class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Про місто</h2>
+                    <p class="lead"><b>Ужгород -</b> захоплююче місто, розташоване на заході України, прикордонне з
+                        чотирма країнами: Словаччиною, Польщею, Угорщиною та Румунією. Його багатий
+                        історичний спадок і мультикультурний спирит додають особливий колорит цьому місцю.
+                        Ужгород славиться своєю унікальною архітектурою, різноманітністю культурних звичаїв
+                        та традицій, а також природною красою, яка оточує його з усіх сторін. Місто пропонує
+                        гостям і мешканцям незабутні враження, завдяки своїм пам'ятникам історії, сучасним
+                        розвагам і гостинності свого народу. Однією з головних архітектурних пам'яток міста є
+                        Ужгородський
+                        замок, який датується 9 століттям і є одним
+                        із найстаріших замків на території України. Замок має унікальну архітектуру та розташований на
+                        березі
+                        річки Уж, надаючи йому заворожливий вигляд. Місто також славиться своєю музичною та художньою
+                        спадщиною. В Ужгороді можна знайти численні музеї,
+                        галереї, театри та фестивалі, що відображають різні аспекти культури і мистецтва. Загалом,
+                        Ужгород -
+                        це чарівне місто, яке поєднує історію, культуру і природу, створюючи унікальну
+                        атмосферу для тих, хто відвідує його.</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                        preserveAspectRatio="xMidYMid slice" focusable="false" src="Data/Images/7.jpg">
+                </div>
             </div>
-            <div class="col-md-5">
-                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                    height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-                    preserveAspectRatio="xMidYMid slice" focusable="false" src="Data/Images/7.jpg">
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">Визначні місця</h2>
+                    <p class="lead">Серед найвідоміших місць Ужгорода є його замок, костел, синагога та інші
+                        архітектурні
+                        пам'ятки. У 1646
+                        році під егідою Ватикану проголошено Ужгородську унію та утворено греко-католицьку церкву на
+                        Закарпатті.
+                    </p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                        preserveAspectRatio="xMidYMid slice" focusable="false" src="Data/Images/11.jpg">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette" id="history">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Історія</h2>
+                    <p class="lead">Засноване у IX столітті. Місто тимчасово перебувало під владою Угорщини, а згодом —
+                        Австро-Угорщини. Було
+                        тривалий час фортецею роду Другетів. Ужгород розвивався як промисловий та культурний центр
+                        Закарпаття. У
+                        1919 році був столицею Підкарпатської Русі у складі Чехословаччини, за результатами першого
+                        Віденського
+                        арбітражу 1938 року став частиною Хортистської Угорщини, у 1945 році увійшов до складу УРСР, з
+                        1991
+                        року
+                        — у складі Незалежної України. Герб Ужгорода — офіційно затверджений рішенням Ужгородської
+                        міської
+                        ради від 14 червня 1990 року. Являє
+                        собою німецький щит на синьому полі якого зображено, як із землі ростуть три золоті виноградні
+                        лози,
+                        що
+                        перетинають одна одну, з трьома листочками і двома гронами винограду на них. Виноградна лоза в
+                        символіці міста відома з 1635 року, коли місто використовувало печатку з малюнком
+                        виноградного куща з трьома лозами та двома гронами. Герб на печатці обрамлював напис: "Sigillum
+                        civitatis Ungvariensis".</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                        preserveAspectRatio="xMidYMid slice" focusable="false" src="Data/Images/12.png">
+                </div>
             </div>
         </div>
 
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-            <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading">Визначні місця</h2>
-                <p class="lead">Серед найвідоміших місць Ужгорода є його замок, костел, синагога та інші архітектурні
-                    пам'ятки. У 1646
-                    році під егідою Ватикану проголошено Ужгородську унію та утворено греко-католицьку церкву на
-                    Закарпатті.
-                </p>
-            </div>
-            <div class="col-md-5 order-md-1">
-                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                    height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-                    preserveAspectRatio="xMidYMid slice" focusable="false" src="Data/Images/11.jpg">
-            </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette" id="history">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">Історія</h2>
-                <p class="lead">Засноване у IX столітті. Місто тимчасово перебувало під владою Угорщини, а згодом —
-                    Австро-Угорщини. Було
-                    тривалий час фортецею роду Другетів. Ужгород розвивався як промисловий та культурний центр
-                    Закарпаття. У
-                    1919 році був столицею Підкарпатської Русі у складі Чехословаччини, за результатами першого
-                    Віденського
-                    арбітражу 1938 року став частиною Хортистської Угорщини, у 1945 році увійшов до складу УРСР, з 1991
-                    року
-                    — у складі Незалежної України. Герб Ужгорода — офіційно затверджений рішенням Ужгородської міської
-                    ради від 14 червня 1990 року. Являє
-                    собою німецький щит на синьому полі якого зображено, як із землі ростуть три золоті виноградні лози,
-                    що
-                    перетинають одна одну, з трьома листочками і двома гронами винограду на них. Виноградна лоза в
-                    символіці міста відома з 1635 року, коли місто використовувало печатку з малюнком
-                    виноградного куща з трьома лозами та двома гронами. Герб на печатці обрамлював напис: "Sigillum
-                    civitatis Ungvariensis".</p>
-            </div>
-            <div class="col-md-5">
-                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                    height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-                    preserveAspectRatio="xMidYMid slice" focusable="false" src="Data/Images/12.png">
-            </div>
-        </div>
-    </div>
-
-    <div class="album py-5">
-        <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <div class="col">
-                    <div class="card shadow-sm" style="height: 425px;">
-                        <img class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Эскиз"
-                            preserveAspectRatio="xMidYMid slice" focusable="false" src="Data/Images/18.jpg">
-                        <title>Міст</title>
-                        <div class="card-body">
-                            <p class="card-text">Колись “Втрачений Ужгород” вже писав про історію сучасного пішохідного
-                                мосту та його попередника – так званого Великого мосту....</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a type="button" class="btn btn-sm btn-outline-secondary"
-                                        href="Pages/historyBridgePage.html">Перегляд</a>
+        <div class="album py-5">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm" style="height: 425px;">
+                            <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Эскиз"
+                                preserveAspectRatio="xMidYMid slice" focusable="false" src="Data/Images/18.jpg">
+                            <title>Міст</title>
+                            <div class="card-body">
+                                <p class="card-text text-dark">Колись “Втрачений Ужгород” вже писав про історію
+                                    сучасного
+                                    пішохідного
+                                    мосту та його попередника – так званого Великого мосту....</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a type="button" class="btn btn-sm btn-outline-secondary text-dark"
+                                            href="Pages/historyBridgePage.html">Перегляд</a>
+                                    </div>
+                                    <small class="text-muted">Міст</small>
                                 </div>
-                                <small class="text-muted">Міст</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm" style="height: 425px;">
+                            <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Эскиз"
+                                preserveAspectRatio="xMidYMid slice" focusable="false" src="Data/Images/7.jpg">
+                            <title>Назва міста</title>
+                            <div class="card-body">
+                                <p class="card-text text-dark">Історія Ужгорода - одного із найстаровинніших міст в
+                                    Україні та
+                                    Європі,
+                                    бере свій початок
+                                    у сивій давнині....</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a type="button" class="btn btn-sm btn-outline-secondary text-dark"
+                                            href="Pages/historyNamePage.html">Перегляд</a>
+                                    </div>
+                                    <small class="text-muted">Назва міста</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm" style="height: 425px;">
+                            <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Эскиз"
+                                preserveAspectRatio="xMidYMid slice" focusable="false" src="Data/Images/26.jpg">
+                            <title>Назва міста</title>
+                            <div class="card-body">
+                                <p class="card-text text-dark">Замок є найдавнішою і найціннішою історико-архітектурною
+                                    спорудою
+                                    міста. Від назви замку Унгвар (замок на річці) найменувалося й місто (на початку XX
+                                    ст.
+                                    назва змінена на слов'янське Ужгород)....</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a type="button" class="btn btn-sm btn-outline-secondary text-dark"
+                                            href="Pages/historyCastlePage.html">Перегляд</a>
+                                    </div>
+                                    <small class="text-muted">Замок</small>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col">
-                    <div class="card shadow-sm" style="height: 425px;">
-                        <img class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Эскиз"
-                            preserveAspectRatio="xMidYMid slice" focusable="false" src="Data/Images/7.jpg">
-                        <title>Назва міста</title>
-                        <div class="card-body">
-                            <p class="card-text">Історія Ужгорода - одного із найстаровинніших міст в Україні та Європі,
-                                бере свій початок
-                                у сивій давнині....</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a type="button" class="btn btn-sm btn-outline-secondary"
-                                        href="Pages/historyNamePage.html">Перегляд</a>
-                                </div>
-                                <small class="text-muted">Назва міста</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card shadow-sm" style="height: 425px;">
-                        <img class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Эскиз"
-                            preserveAspectRatio="xMidYMid slice" focusable="false" src="Data/Images/26.jpg">
-                        <title>Назва міста</title>
-                        <div class="card-body">
-                            <p class="card-text">Замок є найдавнішою і найціннішою історико-архітектурною спорудою
-                                міста. Від назви замку Унгвар (замок на річці) найменувалося й місто (на початку XX ст.
-                                назва змінена на слов'янське Ужгород)....</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a type="button" class="btn btn-sm btn-outline-secondary"
-                                        href="Pages/historyCastlePage.html">Перегляд</a>
-                                </div>
-                                <small class="text-muted">Замок</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
-    </div>
+    </main>
 
     <section id="contact">
         <div class="bottom">
