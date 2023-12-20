@@ -106,6 +106,36 @@
                 updateLogoImage();
             };
 
+            window.addEventListener('scroll', function () {
+                const scrolled = window.scrollY;
+                const header = document.querySelector('.header');
+                header.style.backgroundPositionY = (scrolled * 0.5) + 'px';
+            });
+
+            function isElementAtDistance(elem, distance) {
+                const rect = elem.getBoundingClientRect();
+                return rect.top <= window.innerHeight - distance;
+            }
+
+            function activateClassOnScroll() {
+                const elements = document.querySelectorAll('.featurette');
+
+                elements.forEach(elem => {
+                    if (isElementAtDistance(elem, 200)) {
+                        elem.querySelector('.left').classList.remove('scrolled');
+                        elem.querySelector('.right').classList.remove('scrolled');
+                    } else {
+                        elem.querySelector('.left').classList.add('scrolled');
+                        elem.querySelector('.right').classList.add('scrolled');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', activateClassOnScroll);
+
+            activateClassOnScroll();
+
+
         });
     </script>
 </head>
@@ -132,11 +162,13 @@
     </div>
 
     <header class="header">
-        <div class="theme scrolled">
-            <h1>Ласкаво просимо до <br> Ужгорода</h1>
-            <p>Відкрийте для себе красу та культурний спадок цього українського міста.</p>
-            <a href="#about" class="cta-button">Дізнатися більше</a>
-        </div>
+        <main class="px-3">
+            <div class="theme scrolled">
+                <h1>Ласкаво просимо до <br> Ужгорода</h1>
+                <p>Відкрийте для себе красу та культурний спадок цього українського міста.</p>
+                <a href="#about" class="cta-button">Дізнатися більше</a>
+            </div>
+        </main>
     </header>
 
     <main class="container">
@@ -144,7 +176,7 @@
             <hr class="featurette-divider">
 
             <div id="about" class="row featurette">
-                <div class="col-md-7">
+                <div class="col-md-7 left">
                     <h2 class="featurette-heading">Про місто</h2>
                     <p class="lead"><b>Ужгород -</b> захоплююче місто, розташоване на заході України, прикордонне з
                         чотирма країнами: Словаччиною, Польщею, Угорщиною та Румунією. Його багатий
@@ -164,7 +196,7 @@
                         це чарівне місто, яке поєднує історію, культуру і природу, створюючи унікальну
                         атмосферу для тих, хто відвідує його.</p>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-5 right">
                     <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
                         height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
                         preserveAspectRatio="xMidYMid slice" focusable="false" src="Data/Images/7.jpg">
@@ -174,7 +206,7 @@
             <hr class="featurette-divider">
 
             <div class="row featurette">
-                <div class="col-md-7 order-md-2">
+                <div class="col-md-7 order-md-2 right">
                     <h2 class="featurette-heading">Визначні місця</h2>
                     <p class="lead">Серед найвідоміших місць Ужгорода є його замок, костел, синагога та інші
                         архітектурні
@@ -183,7 +215,7 @@
                         Закарпатті.
                     </p>
                 </div>
-                <div class="col-md-5 order-md-1">
+                <div class="col-md-5 order-md-1 left">
                     <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
                         height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
                         preserveAspectRatio="xMidYMid slice" focusable="false" src="Data/Images/11.jpg">
@@ -193,7 +225,7 @@
             <hr class="featurette-divider">
 
             <div class="row featurette" id="history">
-                <div class="col-md-7">
+                <div class="col-md-7 left">
                     <h2 class="featurette-heading">Історія</h2>
                     <p class="lead">Засноване у IX столітті. Місто тимчасово перебувало під владою Угорщини, а згодом —
                         Австро-Угорщини. Було
@@ -215,7 +247,7 @@
                         виноградного куща з трьома лозами та двома гронами. Герб на печатці обрамлював напис: "Sigillum
                         civitatis Ungvariensis".</p>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-5 right">
                     <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
                         height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
                         preserveAspectRatio="xMidYMid slice" focusable="false" src="Data/Images/12.png">
@@ -292,9 +324,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style="margin-bottom: 15px;">
                     <div class="col">
                         <div class="card shadow-sm" style="height: 425px;">
                             <img class="bd-placeholder-img card-img-top" width="100%" height="225"
@@ -355,9 +385,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style="margin-bottom: 15px;">
                     <div class="col">
                         <div class="card shadow-sm" style="height: 425px;">
                             <img class="bd-placeholder-img card-img-top" width="100%" height="225"
@@ -367,7 +395,7 @@
                             <div class="card-body">
                                 <p class="card-text text-dark">Перші відомості про православну громаду Ужгорода датовані
                                     1575 р. Тоді мовилося про парафіяльний дім, а з 1578 р. – і
-                                    про храм неподалік від Малого Ужа....</p>
+                                    про храм неподалік від Мал....</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a type="button" class="btn btn-sm btn-outline-secondary text-dark"
