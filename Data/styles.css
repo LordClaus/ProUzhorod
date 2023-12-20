@@ -367,8 +367,3 @@ img{
     color: #111 !important;
     background-color: #fff !important;
 }
-
-.dark-theme .image-container img[src$="25.png"] {
-    content: url('24.png');
-}
-

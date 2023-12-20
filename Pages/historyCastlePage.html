@@ -14,6 +14,55 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+
+            function updateLogoImage() {
+                const logoImage = document.getElementById('logo-image');
+                const isDarkTheme = document.body.classList.contains('dark-theme');
+
+                if (isDarkTheme) {
+                    logoImage.src = '../Data/Images/24.png';
+                } else {
+                    logoImage.src = '../Data/Images/25.png';
+                }
+            }
+
+            const toggleSwitch = document.getElementById("switch");
+
+            const currentTheme = localStorage.getItem("theme");
+            if (currentTheme) {
+                document.body.classList.add(currentTheme);
+                if (currentTheme === "dark-theme") {
+                    toggleSwitch.checked = true;
+                }
+            }
+
+            toggleSwitch.addEventListener("change", function () {
+                if (this.checked) {
+                    document.body.classList.add("dark-theme");
+                    localStorage.setItem("theme", "dark-theme");
+                } else {
+                    document.body.classList.remove("dark-theme");
+                    localStorage.setItem("theme", "");
+                }
+
+                updateLogoImage();
+            });
+
+            window.onload = function () {
+                const savedTheme = localStorage.getItem("theme");
+                if (savedTheme && savedTheme === "dark-theme") {
+                    document.body.classList.add("dark-theme");
+                    toggleSwitch.checked = true;
+                }
+
+                updateLogoImage();
+            };
+
+        });
+    </script>
 </head>
 
 <body>
@@ -24,7 +73,7 @@
                 <svg class="bi me-2" width="40" height="32">
                     <use xlink:href="#bootstrap"></use>
                 </svg>
-                <img src="../Data/Images/25.png" height="50px" class="d-inline-block align-text-top">
+                <img src="../Data/Images/25.png" height="50px" id="logo-image" class="d-inline-block align-text-top">
                 <h2 class="m-0">ProUzhhorod</h2>
             </a>
             <ul class="nav nav-pills">
@@ -122,10 +171,10 @@
                                 src="../Data/Images/26.jpg">
                         </div>
                     </div>
-                            <p>У 1775 р., на прохання єпископа Андрія Бачинського, австрійська імператриця Марія Терезія
-                                передала замок Мукачівській греко-католицькій єпархії, яка з 1780 р. розмістила у ньому
-                                богословську семінарію (проіснувала тут до 1945 р.).
-                            </p>
+                    <p>У 1775 р., на прохання єпископа Андрія Бачинського, австрійська імператриця Марія Терезія
+                        передала замок Мукачівській греко-католицькій єпархії, яка з 1780 р. розмістила у ньому
+                        богословську семінарію (проіснувала тут до 1945 р.).
+                    </p>
                     <p>Впродовж свого існування фортеця зазнавала багаторазових змін в архітектурі. Зовні замок має
                         вигляд могутньої оборонної споруди у формі неправильного чотирикутника (трапеції), у кожному
                         куті якого розміщені бастіони староіталійського типу. Ця архітектурна особливість характерна для
@@ -177,21 +226,21 @@
             <div class="col-md-4">
                 <div class="position-sticky" style=" padding-top: 120px; top: 2rem;">
                     <div class="p-4 mb-3 bg-light rounded">
-                        <h4 class="fst-italic">Про автора</h4>
-                        <p class="mb-0">Белейканич Єлизавета Тиборівна</p>
+                        <h4 class="fst-italic text-dark">Про автора</h4>
+                        <p class="mb-0 text-dark">Белейканич Єлизавета Тиборівна</p>
                     </div>
 
                     <div class="p-4">
                         <h4 class="fst-italic">Список інших історій</h4>
                         <ol class="list-unstyled mb-0">
-                            <li><a href="#">Міст</a></li>
-                            <li><a href="#">Назва міста</a></li>
-                            <li><a href="#">Замок</a></li>
-                            <li><a href="#">Шандор Петефі</a></li>
-                            <li><a href="#">Минайло</a></li>
-                            <li><a href="#">Кафедральний собор</a></li>
-                            <li><a href="#">Православна громада Ужгорода</a></li>
-                            <li><a href="#">Філармонія</a></li>
+                            <li><a href="historyBridgePage.html">Міст</a></li>
+                            <li><a href="historyNamePage.html">Назва міста</a></li>
+                            <li><a href="historyCastlePage.html">Замок</a></li>
+                            <li><a href="historyPetefiPage.html">Шандор Петефі</a></li>
+                            <li><a href="historyManayloPage.html">Манайло</a></li>
+                            <li><a href="historySoborPage.html">Кафедральний собор</a></li>
+                            <li><a href="historyPravoslavniPage.html">Православна громада Ужгорода</a></li>
+                            <li><a href="historyFylarmoniaPage.html">Філармонія</a></li>
                         </ol>
                     </div>
                 </div>

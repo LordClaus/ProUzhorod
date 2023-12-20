@@ -16,7 +16,6 @@
         crossorigin="anonymous"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const text = document.querySelector(".text");
             const img = document.querySelector(".img");
             const div = document.querySelector(".theme");
             const container = document.querySelector(".container-fluid");
@@ -30,15 +29,6 @@
                     div.classList.remove("scrolled");
                     container.classList.add('scrolled');
                 };
-                if (window.innerWidth > 750) {
-                    if (scrollPosition > 600) {
-                        text.classList.remove("scrolled");
-                        img.classList.remove("scrolled");
-                    } else {
-                        text.classList.add("scrolled");
-                        img.classList.add("scrolled");
-                    };
-                }
             });
 
             let offset = window.innerWidth < 800 ? 200 : 140;
@@ -235,7 +225,7 @@
 
         <div class="album py-5">
             <div class="container">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style="margin-bottom: 15px;">
                     <div class="col">
                         <div class="card shadow-sm" style="height: 425px;">
                             <img class="bd-placeholder-img card-img-top" width="100%" height="225"
@@ -291,14 +281,119 @@
                                 <p class="card-text text-dark">Замок є найдавнішою і найціннішою історико-архітектурною
                                     спорудою
                                     міста. Від назви замку Унгвар (замок на річці) найменувалося й місто (на початку XX
-                                    ст.
-                                    назва змінена на слов'янське Ужгород)....</p>
+                                    ст....</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a type="button" class="btn btn-sm btn-outline-secondary text-dark"
                                             href="Pages/historyCastlePage.html">Перегляд</a>
                                     </div>
                                     <small class="text-muted">Замок</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style="margin-bottom: 15px;">
+                    <div class="col">
+                        <div class="card shadow-sm" style="height: 425px;">
+                            <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Эскиз"
+                                preserveAspectRatio="xMidYMid slice" focusable="false" src="Data/Images/27.jpg">
+                            <title>Міст</title>
+                            <div class="card-body">
+                                <p class="card-text text-dark">Площа була зведена фактично на болоті, яке постійно
+                                    затоплювало водами Ужа. Ще у XVII столітті будинків там не було взагалі....</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a type="button" class="btn btn-sm btn-outline-secondary text-dark"
+                                            href="Pages/historyPetefiPage.html">Перегляд</a>
+                                    </div>
+                                    <small class="text-muted">Шандор Петефі</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm" style="height: 425px;">
+                            <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Эскиз"
+                                preserveAspectRatio="xMidYMid slice" focusable="false" src="Data/Images/28.jpg">
+                            <title>Назва міста</title>
+                            <div class="card-body">
+                                <p class="card-text text-dark">Меморіальний будинок-музей народного художника України
+                                    Федора Манайла — музейний заклад художньо-меморіального спрямування в Ужгороді....
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a type="button" class="btn btn-sm btn-outline-secondary text-dark"
+                                            href="Pages/historyManayloPage.html">Перегляд</a>
+                                    </div>
+                                    <small class="text-muted">Манайло</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm" style="height: 425px;">
+                            <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Эскиз"
+                                preserveAspectRatio="xMidYMid slice" focusable="false" src="Data/Images/29.jfif">
+                            <title>Назва міста</title>
+                            <div class="card-body">
+                                <p class="card-text text-dark">У першій половині XVII ст. на цьому місці стояли хатини
+                                    міщан. Володар міста Іван X Другет вирішив переселити в Ужгород....</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a type="button" class="btn btn-sm btn-outline-secondary text-dark"
+                                            href="Pages/historySoborPage.html">Перегляд</a>
+                                    </div>
+                                    <small class="text-muted">Кафедральний собор</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style="margin-bottom: 15px;">
+                    <div class="col">
+                        <div class="card shadow-sm" style="height: 425px;">
+                            <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Эскиз"
+                                preserveAspectRatio="xMidYMid slice" focusable="false" src="Data/Images/30.jfif">
+                            <title>Міст</title>
+                            <div class="card-body">
+                                <p class="card-text text-dark">Перші відомості про православну громаду Ужгорода датовані
+                                    1575 р. Тоді мовилося про парафіяльний дім, а з 1578 р. – і
+                                    про храм неподалік від Малого Ужа....</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a type="button" class="btn btn-sm btn-outline-secondary text-dark"
+                                            href="Pages/historyPravoslavniPage.html">Перегляд</a>
+                                    </div>
+                                    <small class="text-muted">Православна громада Ужгорода</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm" style="height: 425px;">
+                            <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Эскиз"
+                                preserveAspectRatio="xMidYMid slice" focusable="false" src="Data/Images/31.png">
+                            <title>Назва міста</title>
+                            <div class="card-body">
+                                <p class="card-text text-dark">Звідси видно панораму набережної Ужа. Навесні 1944 р.
+                                    євреї Закарпаття пережили демографічну катастрофу, після якої....</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a type="button" class="btn btn-sm btn-outline-secondary text-dark"
+                                            href="Pages/historyFylarmoniaPage.html">Перегляд</a>
+                                    </div>
+                                    <small class="text-muted">Філармонія</small>
                                 </div>
                             </div>
                         </div>

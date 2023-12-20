@@ -16,12 +16,26 @@
         crossorigin="anonymous"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Перевіряємо, чи зберіглась темна тема у localStorage
-            const isDarkTheme = localStorage.getItem('theme') === 'dark-theme';
 
-            // Якщо темна тема була активована на головній сторінці, застосуємо її на цій сторінці
-            if (isDarkTheme) {
-                document.body.classList.add('dark-theme');
+            
+            const toggleSwitch = document.getElementById("switch");
+
+            const currentTheme = localStorage.getItem("theme");
+
+            function updateLogoImage() {
+                const logoImage = document.getElementById('logo-image');
+                const isDarkTheme = document.body.classList.contains('dark-theme');
+
+                if (isDarkTheme) {
+                    logoImage.src = 'Data/Images/24.png';
+                } else {
+                    logoImage.src = 'Data/Images/25.png';
+                }
+            }
+            
+            if (currentTheme) {
+                document.body.classList.add(currentTheme);
+                updateLogoImage();
             }
         });
     </script>
@@ -35,7 +49,7 @@
                 <svg class="bi me-2" width="40" height="32">
                     <use xlink:href="#bootstrap"></use>
                 </svg>
-                <img src="Data/Images/25.png" height="50px" class="d-inline-block align-text-top">
+                <img src="Data/Images/25.png" height="50px" id="logo-image" class="d-inline-block align-text-top">
                 <h2 class="m-0">ProUzhhorod</h2>
             </a>
             <ul class="nav nav-pills">
