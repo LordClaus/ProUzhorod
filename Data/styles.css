@@ -13,6 +13,21 @@
     margin: 0;
 }
 
+#languageDropdownMenu {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: -100%; /* Позиціюємо меню зліва від посилання */
+    background-color: white;
+    border: 1px solid white;
+    padding: 5px;
+}
+
+.dropdown-item:hover + #languageDropdownMenu,
+#languageDropdownMenu:hover {
+    display: block;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
