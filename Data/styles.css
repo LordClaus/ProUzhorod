@@ -16,8 +16,6 @@
 #languageDropdownMenu {
     display: none;
     position: absolute;
-    top: 50%;
-    left: -100%; /* Позиціюємо меню зліва від посилання */
     background-color: white;
     border: 1px solid white;
     padding: 5px;
@@ -62,7 +60,7 @@ a {
 .header {
     color: #fff;
     padding-top: 220px;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Images/4.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Images/35.gif");
     background-size: cover;
     background-position: center;
     height: 770px;
