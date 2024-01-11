@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>ProUzhhorod</title>
+     <link rel="stylesheet" type="text/css" href="../Data/styles.css">
+     <link rel="icon" href="../Data/Images/6.png" type="image/x-icon">
+     <!-- Bootstrap CSS (jsDelivr CDN) -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+     <!-- Bootstrap Bundle JS (jsDelivr CDN) -->
+     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+         crossorigin="anonymous"></script>
+         <script>
+             document.addEventListener('DOMContentLoaded', function () {
+    
+    
+                 function updateLogoImage() {
+                     const logoImage = document.getElementById('logo-image');
+                     const isDarkTheme = document.body.classList.contains('dark-theme');
+    
+                     if (isDarkTheme) {
+                         logoImage.src = '../Data/Images/24.png';
+                     } else {
+                         logoImage.src = '../Data/Images/25.png';
+                     }
+                 }
+    
+                 const toggleSwitch = document.getElementById("switch");
+    
+                 const currentTheme = localStorage.getItem("theme");
+                 if (currentTheme) {
+                     document.body.classList.add(currentTheme);
+                     if (currentTheme === "dark-theme") {
+                         toggleSwitch.checked = true;
+                     }
+                 }
+    
+                 toggleSwitch.addEventListener("change", function () {
+                     if (this.checked) {
+                         document.body.classList.add("dark-theme");
+                         localStorage.setItem("theme", "dark-theme");
+                     } else {
+                         document.body.classList.remove("dark-theme");
+                         localStorage.setItem("theme", "");
+                     }
+    
+                     updateLogoImage();
+                 });
+    
+                 window.onload = function () {
+                     const savedTheme = localStorage.getItem("theme");
+                     if (savedTheme && savedTheme === "dark-theme") {
+                         document.body.classList.add("dark-theme");
+                         toggleSwitch.checked = true;
+                     }
+    
+                     updateLogoImage();
+                 };
+    
+             });
+         </script>
+     </head>
+    
+     <body>
+         <div class="container-fluid fixed-top">
+             <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+                 <a href="../Main.html"
+                     class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                     <svg class="bi me-2" width="40" height="32">
+                         <use xlink:href="#bootstrap"></use>
+                     </svg>
+                     <img src="../Data/Images/25.png" height="50px" id="logo-image" class="d-inline-block align-text-top">
+                     <h2 class="m-0">ProUzhhorod</h2>
+                 </a>
+                 <ul class="nav nav-pills">
+                     <li class="nav-item"><a class="nav-link text-dark" href="../Main.html">About the city</a></li>
+                     <li class="nav-item"><a class="nav-link text-dark" href="../map.html">Map of Uzhhorod</a></li>
+                     <li class="nav-item"><a class="nav-link text-dark" href="../mapAirRade.html">Air Raid Map</a>
+                     </li>
+                     <li class="nav-item"><a class="nav-link text-dark" href="#contact">More</a></li>
+                 </ul>
+             </header>
+         </div>
+
+     <header style="height: 200px; color: #fff; padding-top: 120px; visibility: hidden;">
+         <div class="scrolled">
+             <h1>About us</h1>
+         </div>
+     </header>
+
+     <main class="container">
+         <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+             <div class="col-md-6 px-0">
+                 <h1 class="display-4 fst-italic">City name</h1>
+             </div>
+         </div>
+
+         <div class="row g-5">
+             <div class="col-md-8">
+                 <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                     History
+                 </h3>
+
+                 <article class="blog-post">
+                     <h2 class="blog-post-title">Where it all started</h2>
+
+                     <p>The history of Uzhhorod - one of the most ancient cities in Ukraine and Europe - begins
+                         in ancient times. Already in Paleolithic times, the first people lived on the territory of our city -
+                         Neanderthals In the period of the early Middle Ages, UZhgorod city was the center of the western
+                         part of Transcarpathia, and in the 9th century it turned into a small town. That is, at the time when Kyivska
+                         Rus was formed into a powerful state entity of Eastern Europe, Uzhhorod already existed.
+                         There is a lot of debate about the origin of the city's name, both in the past and now
+                         disputes, however, the final conclusion has not yet been made. Modern onomastics considers
+                         the name of the city of Uzhhorod as a Slavic composite derived from the hydronym "Uzh" and the appellation
+                         "town" (city). That is, Uzhgorod is a city on the Uzh. Along with this, the Hungarian name was preserved
+                         city - Ungvar. "Ung" is the result of the Latin translation of the Slavic "Luzh" (puddle, puddle,
+                         swamp, mire). "Var" for our ancestors of the Danube ancestral home had the meaning "store",
+                         "protection", "welding in one". "Var" comes from the deity "Varuna", who guards the sky
+                         Varu from everything on the left, that is, from evil, from the mythological king Laius (left). However, it is necessary
+                         remember the historical fact that the Ugrian tribes had not yet managed to
+                         to conquer Transcarpathia and Uzhgorod, which were the most distant southwestern ones
+                         fortified points of the Old Russian state, despite the attempt of Prince Laborets to give
+                         repulse of the Ugrians, the latter won, killing many warriors and their leader. It is no coincidence that
+                         oral folk art calls Laborets a "glorious prince", a defender of his native land.
+                         Despite the fact that the entire territory of our region, including Uzhhorod, was captured
+                         Hungary, the history of the city recorded the facts when the Old Russian princes returned it to
+                         bosom of his state. During the years 1281-1321, Uzhgorod, like a number of other Transcarpathian cities,
+                         was part of the Galicia-Volyn principality, headed by Danylo Halytskyi's son
+                         Leo - "the most powerful of Danylo's descendants." Only during the reign of Yuriy Lvovych,
+                         taking advantage of the weakness of the Galicia-Volyn state, the Hungarians managed to regain
+                         Uzhhorod
+                         XIV - XVIII centuries - a difficult period in the history of Uzhhorod. Although in 1430 the city
+                         received privileges from the king, but continued to remain small in terms of territory and
+                         population In 1514, Uzhgorod residents took an active part in the peasant war under the leadership
+                         D. Doži, for which the Hungarian government called Uzhgorod a "rebellious city". This one is rebellious
+                         Uzhhorod residents discovered the spirit at the end of 1648 and at the beginning of 1649, when they were near the walls
+                         Troops of Zaporizhia Cossacks led by Hetman Bohdan appeared at the Uzhgorod Castle
+                         Khmelnytskyi. The people of Uzhgorod did not remain aloof during the war of national liberation
+                         1703 - 1711 under the leadership of Ferenc Rakoci II. With arrival in 1711 to Uzhhorod
+                         Austrian army, the city was looted and plundered, ruined and burned. Only with
+                         in the second half of the 18th century, the revival of Uzhhorod begins. Certain influence on
+                         the development of the city was accomplished by the reforms of Maria Theresa and her son Joseph II. From political events
+                         in the first half of the 19th century, the revolution of 1848 had the greatest impact on Uzhhorod -
+                         1849 in Hungary. Uzhhorod residents were impressed by the revolutionary slogans "Down with the monarch!" and
+                         "Freedom to the people!", the abolition of serfdom, censorship and the introduction of democratic freedoms.
+                         About two thousand residents of Uzhhorod and the surrounding villages joined the ranks of the Nationalists
+                         guards Despite the defeat of the revolution, the residents of Uzhhorod achieved Russian recognition
+                         (Ukrainian) language as a compulsory subject, the opening of a Russian gymnasium in the city.</p>
+                     <p>At the end of the 18th and the beginning of the 19th centuries, Uzhhorod became famous
+                         the European cultural center that gave world culture A. Bachynskyi, I. Bazylovych,
+                         I. Pasteliya, V. Dovgovycha, I. Fogorashiya, M. Luchkaya, Yu. Gutsu-Venelina and many others.
+                         Many people from Zakarpattia, who at one time graduated from educational institutions in Uzhhorod, taught at
+                         the most prestigious universities of Lviv, Kyiv, St. Petersburg, and a number of European countries.
+                         For a long time, the "father of Transcarpathian nationalism" lived and worked in Uzhhorod
+                         revival" of the 19th century Oleksandr Dukhnovich and the famous teacher, cultural and
+                         political figure of the region of our century AvgUstin Voloshyn - the first president of the independent
+                         Carpatho-Ukrainian state.
+                         On May 8, 1919, the Central Russian People's Council made a decision in Uzhhorod
+                         on the accession of Transcarpathia to Czechoslovakia with the rights of autonomy. The fate of the land
+                         was decided at the Paris Peace Conference. On November 10, 1919, its members
+                         decided to include Transcarpathia in the newly created Czech SSR, and on November 18, I. Breikha was there
+                         appointed temporary administrator of the region. Uzhhorod became the capital of Podkarpattia
+                         Russia, which greatly influenced the economic development and cultural life of the region. IN
+                         "Prosvita" and O. Dukhnovych societies, more than thirty parties, operated in the city. For
+                         in the interwar period in Uzhgorod, outstanding cultural figures of the region A. Voloshyn,
+                         V. Grenzha-Donskyi, S. Sabol (Zoreslav), Yu. Sheregii and dozens of others. A significant contribution to
+                         O. Oles, S. Cherkasenko, O. Olzhych, V. Birchak contributed to the development of the city's education and culture.
+                         On October 11, 1938, the first autonomous government was formed in Uzhhorod
+                         of Subcarpathian Rus, which was headed by A. Brodiy, but already on October 26, the Transcarpathian prime minister was
+                         was arrested as an agent of Hungary and the new cabinet was headed by A. Voloshyn - a Ukrainian leader
+                         directly in the country. However, the political situation in Transcarpathia changed dramatically after the decisions
+                         of the Vienna Arbitration on November 2, 1938. According to them, in favor of Hungary
+                         Uzhhorod, Mukachevo and Berehovo with their adjacent districts. A. Voloshyn was forced
+                         move the capital of Carpathian Ukraine to Khust. In this ancient city on March 15, 1939
+                         In 2008, the Diet was held, which declared Carpathian Ukraine an independent state. 18
+                         In March this territory, despite the heroic resistance of its defenders, was occupied
+                         troops of Hortist Hungary.
+                         On November 11, 1938, Hungarian troops entered Uzhhorod. She was in the city
+                         the multi-party system, which was formed during Czechoslovakia, was liquidated. in return
+                         the activities of various Hungarian and pro-Hungarian parties were supported in every possible way,
+                         societies
+                         On October 27, 1944, troops of the 4th Ukrainian Front entered Uzhhorod, and after
+                         the decision of the Congress of People's Committees of Transcarpathian Ukraine on November 26, 1944
+                         reunification with Ukraine, on January 22, 1946 Transcarpathian Ukraine was reorganized into
+                         Transcarpathian region, and Uzhhorod became the regional center. Socio-political and cultural
+                         life in Uzhhorod during the fifty years of Soviet power was no different from the lives of others
+                         regional centers of Ukraine. Residents of Uzhhorod welcomed the news about the state
+                         the sovereignty of Ukraine and its declaration as an independent state./p>
+                         <hr>
+                 </article>
+             </div>
+
+             <div class="col-md-4">
+                 <div class="position-sticky" style=" padding-top: 120px; top: 2rem;">
+                     <div class="p-4 mb-3 bg-light rounded">
+                         <h4 class="fst-italic text-dark">About the author</h4>
+                         <p class="mb-0 text-dark">Elizaveta Tiborivna Beleikanych</p>
+                     </div>
+
+                     <div class="p-4">
+                         <h4 class="fst-italic">List of other stories</h4>
+                         <ol class="list-unstyled mb-0">
+                             <li><a href="historyBridgePage.html">Bridge</a></li>
+                             <li><a href="historyNamePage.html">City Name</a></li>
+                             <li><a href="historyCastlePage.html">Castle</a></li>
+                             <li><a href="historyPetefiPage.html">Shandor Petefi</a></li>
+                             <li><a href="historyManayloPage.html">Manaylo</a></li>
+                             <li><a href="historySoborPage.html">Cathedral</a></li>
+                             <li><a href="historyPravoslavniPage.html">Orthodox community of Uzhhorod</a></li>
+                             <li><a href="historyFylarmoniaPage.html">Philarmonia</a></li>
+                         </ol>
+                     </div>
+                 </div>
+             </div>
+     </main>
+
+     <div style="visibility: hidden;">
+         <hr>
+         <hr>
+         <hr>
+     </div>
+
+     <section>
+        <div class="bottom">
+            <h2>Contacts</h2>
+            <p>Address: str. Hrushevsky, 2, Uzhgorod, Ukraine</p>
+            <p>Telephone: +380 99 640 0950</p>
+            <p>Our mail: <a href="mailto:prouzhorod022@gmail.com"
+                    style="color: blue;"><u>prouzhorod022@gmail.com</u></a></p>
+            <h3>We are in:</h3>
+            <div class="links">
+                <a title="facebook" target="_blank" href="https://www.facebook.com/profile.php?id=61554309443191&viewas=100000686899395"><img
+                        src="../Data/Images/19.png"></a>
+                <a title="Instagram" target="_blank" href="https://www.instagram.com/prouzhorod/?hl=en"><img
+                        src="../Data/Images/20.png"></a>
+                <a title="Twitter" target="_blank" href="https://twitter.com/ProUzhorod"><img
+                        src="../Data/Images/21.png"></a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="bottom">
+            <p>&copy; 2023 City of Uzhhorod</p>
+        </div>
+    </footer>
+</body>
+
+</html>

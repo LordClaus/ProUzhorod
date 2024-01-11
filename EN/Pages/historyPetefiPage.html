@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProUzhhorod</title>
+    <link rel="stylesheet" type="text/css" href="../Data/styles.css">
+    <link rel="icon" href="../Data/Images/6.png" type="image/x-icon">
+    <!-- Bootstrap CSS (jsDelivr CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- Bootstrap Bundle JS (jsDelivr CDN) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+    
+    
+                function updateLogoImage() {
+                    const logoImage = document.getElementById('logo-image');
+                    const isDarkTheme = document.body.classList.contains('dark-theme');
+    
+                    if (isDarkTheme) {
+                        logoImage.src = '../Data/Images/24.png';
+                    } else {
+                        logoImage.src = '../Data/Images/25.png';
+                    }
+                }
+    
+                const toggleSwitch = document.getElementById("switch");
+    
+                const currentTheme = localStorage.getItem("theme");
+                if (currentTheme) {
+                    document.body.classList.add(currentTheme);
+                    if (currentTheme === "dark-theme") {
+                        toggleSwitch.checked = true;
+                    }
+                }
+    
+                toggleSwitch.addEventListener("change", function () {
+                    if (this.checked) {
+                        document.body.classList.add("dark-theme");
+                        localStorage.setItem("theme", "dark-theme");
+                    } else {
+                        document.body.classList.remove("dark-theme");
+                        localStorage.setItem("theme", "");
+                    }
+    
+                    updateLogoImage();
+                });
+    
+                window.onload = function () {
+                    const savedTheme = localStorage.getItem("theme");
+                    if (savedTheme && savedTheme === "dark-theme") {
+                        document.body.classList.add("dark-theme");
+                        toggleSwitch.checked = true;
+                    }
+    
+                    updateLogoImage();
+                };
+    
+            });
+        </script>
+    </head>
+    
+    <body>
+        <div class="container-fluid  fixed-top">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+                <a href="../Main.html"
+                    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                    <img src="../Data/Images/25.png" height="50px" id="logo-image" class="d-inline-block align-text-top">
+                    <h2 class="m-0">ProUzhhorod</h2>
+                </a>
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a class="nav-link text-dark" href="../Main.html">Про місто</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="../map.html">Карта Ужгорода</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="../mapAirRade.html">Карта повітряних тривог</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#contact">Більше</a></li>
+                </ul>
+            </header>
+        </div>
+
+    <header style="height: 200px; color: #fff; padding-top: 120px; visibility: hidden;">
+        <div class="scrolled">
+            <h1>Про нас</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+            <div class="col-md-6 px-0">
+                <h1 class="display-4 fst-italic">Шандор Петефі</h1>
+            </div>
+        </div>
+
+        <div class="row g-5">
+            <div class="col-md-8">
+                <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                    Історія
+                </h3>
+
+                <article class="blog-post">
+                    <h2 class="blog-post-title">З чого все починалось</h2>
+
+                    <p>Площа була зведена фактично на болоті, яке постійно затоплювало водами Ужа. Ще у XVII столітті
+                        будинків там не було взагалі.
+
+                    <p>Перша письмова згадка про площу Шандора Петефі походить із 1631 року, в часи коли Ужгород носив
+                        назву Унґвар (Ungvár) і входив до складу Угорського королівства. В ті часи площа мала назву Нове
+                        місто.</p>
+                    <p>Саме тоді в урбаріальному переписі фігурує й тутешня панська корчма, навколо якої власне і
+                        розпочалося формування лівобережної частини Ужгорода. Розвивалося Нове місто повільно. Причиною
+                        цього було його розташування на низькому лівому березі Ужа, якому постійно загрожувала вода.</p>
+
+                    <p>Ця заболочена місцина також була зручним місцем для проведення ярмарків. Оскільки на в’їзді до
+                        Великого (нині пішохідного) мосту стояли спеціальні люди, котрі брали мито за проїзд у місто,
+                        торгувати на болоті було вигідніше. Торгівля поступово стала такою великою, що перша назва площі
+                        з’явилася сама собою – Торгова.</p>
+
+                    <p>Пам'ятник Шандору Петефі, Ужгород
+                        Друга назва – площа Орлина – поширилася у XIX столітті, коли Ужгород, а з’явилася вона все через
+                        ту ж знамениту корчму. Ще у 1780 році старе приміщення знесли, а на її місці новий власник звів
+                        постоялий двір з корчмою. Спочатку він називався “До орла”, а потім змінив назву на “Чорний
+                        орел”. Загалом, судячи з описів, площа довгий час була місцем не надто приємним: під ногами
+                        завжди був бруд, а навкруги стояв сморід від болота та тварин, якими тут таки торгували.</p>
+
+                    <p>У кінці XIX століття, під владою Австро-Угорщини, площі присвоїли ім’я угорського революціонера
+                        Лайоша Кошута.</p>
+                    <p>У добу коли Ужгород був столицею Підкарпатської Русі у складі Чехословаччини, площу звісно ж
+                        перейменували, й вона стала носити ім’я Томаша Масарика. Завдяки Масарику, за час перебування
+                        Закарпаття в складі Чехословаччини значно зріс рівень економічного і культурного розвитку,
+                        покращився життєвий рівень місцевого населення. За часи президентства, Масарик двічі відвідав
+                        Підкарпатську Русь[1]. Саме в цей час площа дуже змінила вигляд, зокрема, посеред неї розбили
+                        сквер, який зберігся донині.
+                    </p>
+
+                    <p> Сквер посеред площі Шандора Петефі створений за часів Чехословаччини
+                        У радянські часи цю частину міста називали площею Сталіна (у сквері якийсь час навіть стояло
+                        погруддя Сталіна), а потім – Возз’єднання. [2]
+                    </p>
+                    <p> Нині ж ми знаємо її, як площу Петефі. Названа в честь революціонер Шандор Петефі, який ввечері
+                        11 липня 1847 року, зупинився на нічліг в Ужгороді. Ніч проведена в "Чорному орлі" й враження
+                        від побаченого дали йому привід написати у своїх "Дорожніх листах" про місто над Ужем такі
+                        слова:
+                    </p>
+                    <p> “А втім, Ужгород надзвичайно погане місто. Брудне й неохайне. Якраз таке, як п' яна людина,
+                        котра впала в калюжу і тепер брудна, хитаючись, іде додому". Хоч слова всесвітньо відомого поета
+                        були дещо різкі, однак відображали в цілому дійсний стан справ.
+                    </p>
+
+                    <p>Сьогодні пам'ять про перебування Шандора Петефі в Ужгороді, у “Чорному орлі”, зберігає бронзовий
+                        пам'ятник поета, який стоїть у сквері, неподалік місця, де колись знаходився заїжджий двір
+                        (пам'ятник відкрито 29 вересня 1990 р., автор Бені Ференці).</p>
+
+                    <p>Походить з небагатої родини. Батько — Штефан (Іштван) Пе́трович (або Стефан Петрович), збіднілий
+                        дворянин, серб за національністю, мати — Марія Грузова (або Груз), словацька селянка. Вперше до
+                        школи пішов у п'ятирічному віці. Саме тоді почав читати й писати, трохи пізніше віршувати,
+                        малювати, вивчати німецьку, угорську та латинську мови. Вже у п'ятнадцять років знав 7 мов.
+
+                    <p>1847 року очолював організацію «Молода Угорщина».</p>
+
+                    <p>Один з керівників революційного повстання в Пешті (15 березня 1848) під час Революції 1848 —
+                        1849.</p>
+
+                    <p>Отримав звання офіцера революційної армії. Потім відбулося його звільнення з армії, оскільки
+                        письменник захворів на туберкульоз.</p>
+
+                    <p>Відповідно до традиційної версії біографії, Петефі загинув під час битви при Шегешварі 31 липня
+                        1849, в бою з козаками російської армії, очолюваної царським генералом Іваном Паскевичем. Згідно
+                        з новою версією, яка не знайшла підтвердження, був поранений, взятий в полон і таємно вивезений
+                        на Сибір, де й помер 1849 року.</p>
+                </article>
+                <hr>
+                <article class="blog-post">
+                    <h2 class="blog-post-title">Творчість</h2>
+
+                    <p>Серед творів:</p>
+                    <ul>
+                        <li>«Вірші» (1844)</li>
+                        <li>Поеми «Сільський молот» і «Витязь Янош» (1844)</li>
+                        <li>Драма «Тигриця і гієна» (1845)</li>
+                        <li>Збірник віршів «Хмари» (1845—1846)</li>
+                        <li>Роман «Шнурок ката» (1846)</li>
+                        <li>Поеми «Пішта Силай» (1846)</li>
+                        <li>«Шалго» (1846)</li>
+                        <li>«Апостол» (1848)</li>
+                    </ul>
+                </article>
+                <hr>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-sticky" style=" padding-top: 120px; top: 2rem;">
+                    <div class="p-4 mb-3 bg-light rounded">
+                        <h4 class="fst-italic text-dark">Про автора</h4>
+                        <p class="mb-0 text-dark">Белейканич Єлизавета Тіборівна</p>
+                    </div>
+
+                    <div class="p-4">
+                        <h4 class="fst-italic">Список інших історій</h4>
+                        <ol class="list-unstyled mb-0">
+                            <li><a href="historyBridgePage.html">Міст</a></li>
+                            <li><a href="historyNamePage.html">Назва міста</a></li>
+                            <li><a href="historyCastlePage.html">Замок</a></li>
+                            <li><a href="historyPetefiPage.html">Шандор Петефі</a></li>
+                            <li><a href="historyManayloPage.html">Манайло</a></li>
+                            <li><a href="historySoborPage.html">Кафедральний собор</a></li>
+                            <li><a href="historyPravoslavniPage.html">Православна громада Ужгорода</a></li>
+                            <li><a href="historyFylarmoniaPage.html">Філармонія</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <div style="visibility: hidden;">
+        <hr>
+        <hr>
+        <hr>
+    </div>
+
+    <section>
+        <div class="bottom">
+            <h2>Контакти</h2>
+            <p>Адреса: вул. Грушевського, 2, Ужгород, Україна</p>
+            <p>Телефон: +380 99 640 0950</p>
+            <p>Наша пошта: <a href="mailto:prouzhorod022@gmail.com"
+                    style="color: blue;"><u>prouzhorod022@gmail.com</u></a></p>
+            <h3>Ми в:</h3>
+            <div class="links">
+                <a title="facebook" target="_blank" href="https://www.facebook.com/profile.php?id=61554309443191&viewas=100000686899395"><img
+                        src="../Data/Images/19.png"></a>
+                <a title="Instagram" target="_blank" href="https://www.instagram.com/prouzhorod/?hl=en"><img
+                        src="../Data/Images/20.png"></a>
+                <a title="Twitter" target="_blank" href="https://twitter.com/ProUzhorod"><img
+                        src="../Data/Images/21.png"></a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="bottom">
+            <p>&copy; 2023 Місто Ужгород</p>
+        </div>
+    </footer>
+</body>
+
+</html>
