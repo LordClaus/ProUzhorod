@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -141,22 +141,22 @@
             const languageDropdownMenu = document.getElementById("languageDropdownMenu");
 
             settingsDropdown.addEventListener("mouseenter", function () {
-                // Показати меню "Налаштування"
+                // Show the Settings menu
                 settingsDropdown.querySelector('.dropdown-menu').classList.add("show");
             });
 
             settingsDropdown.addEventListener("mouseleave", function () {
-                // Сховати меню "Налаштування"
+                // Hide the Settings menu
                 settingsDropdown.querySelector('.dropdown-menu').classList.remove("show");
             });
 
             languageDropdown.addEventListener("mouseenter", function () {
-                // Показати меню "Мова"
+                // Show the Language menu
                 languageDropdownMenu.classList.add("show");
             });
 
             languageDropdown.addEventListener("mouseleave", function () {
-                // Сховати меню "Мова"
+                // Hide the Language menu
                 languageDropdownMenu.classList.remove("show");
             });
 
@@ -204,7 +204,7 @@
 </head>
 
 <body>
-    <div class="container-fluid  fixed-top scrolled">
+    <div class="container-fluid fixed-top scrolled">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
             <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                 <svg class="bi me-2" width="40" height="32">
@@ -214,18 +214,18 @@
                 <h2 class="m-0">ProUzhhorod</h2>
             </a>
             <ul class="nav nav-pills">
-                <li class="nav-item"><a class="nav-link active bg-dark">Про місто</a></li>
-                <li class="nav-item"><a class="nav-link text-dark" href="#history">Історія</a></li>
-                <li class="nav-item"><a class="nav-link text-dark" href="map.html">Карта Ужгорода</a></li>
-                <li class="nav-item"><a class="nav-link text-dark" href="mapAirRade.html">Карта повітряних тривог</a>
+                <li class="nav-item"><a class="nav-link active bg-dark">About the city</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#history">History</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="map.html">Map of Uzhhorod</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="mapAirRade.html">Air Raid Map</a>
                 </li>
-                <li class="nav-item"><a class="nav-link text-dark" href="#contact">Про нас</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#contact">About Us</a></li>
                 <li class="nav-item navbar-dropdown" id="settingsDropdown">
-                    <a class="nav-link text-dark dropdown-toggle">Налаштування</a>
+                    <a class="nav-link text-dark dropdown-toggle">Settings</a>
                     <div class="dropdown-menu" id="languageDropdown">
                         <ul class="nav navbar-nav">
                             <li class="nav-item">
-                                <a class="dropdown-item"> Тема:
+                                <a class="dropdown-item"> Subject:
                                     <div class="toggle-switch">
                                         <input type="checkbox" id="switch" />
                                         <label for="switch" class="toggle-label"></label>
@@ -233,11 +233,11 @@
                                 </a>
                             </li>
                             <li class="nav-item navbar-dropdown">
-                                <a class="dropdown-item">Мова</a>
+                                <a class="dropdown-item">Language</a>
                                 <div class="dropdown-menu" id="languageDropdownMenu">
                                     <ul class="nav navbar-nav">
-                                        <li class="nav-item">UA</li>
-                                        <li class="nav-item"><a href="../EN/Main.html">ENG</a></li>
+                                        <li class="nav-item"><a href="../UA/Main.html">UA</a></li>
+                                        <li class="nav-item">ENG</li>
                                     </ul>
                                 </div>
                             </li>
@@ -251,9 +251,9 @@
     <header class="header">
         <main class="px-3">
             <div class="theme scrolled">
-                <h1>Ласкаво просимо до <br> Ужгорода</h1>
-                <p>Відкрийте для себе красу та культурний спадок цього українського міста.</p>
-                <a href="#about" class="cta-button">Дізнатися більше</a>
+                <h1>Welcome to <br> Uzhhorod</h1>
+                <p>Discover the beauty and cultural heritage of this Ukrainian city.</p>
+                <a href="#about" class="cta-button">Learn more</a>
             </div>
         </main>
     </header>
@@ -264,24 +264,28 @@
 
             <div id="about" class="row featurette">
                 <div class="col-md-7 left">
-                    <h2 class="featurette-heading">Про місто</h2>
-                    <p class="lead"><b>Ужгород -</b> захоплююче місто, розташоване на заході України, прикордонне з
-                        чотирма країнами: Словаччиною, Польщею, Угорщиною та Румунією. Його багатий
-                        історичний спадок і мультикультурний спирит додають особливий колорит цьому місцю.
-                        Ужгород славиться своєю унікальною архітектурою, різноманітністю культурних звичаїв
-                        та традицій, а також природною красою, яка оточує його з усіх сторін. Місто пропонує
-                        гостям і мешканцям незабутні враження, завдяки своїм пам'ятникам історії, сучасним
-                        розвагам і гостинності свого народу. Однією з головних архітектурних пам'яток міста є
-                        Ужгородський
-                        замок, який датується 9 століттям і є одним
-                        із найстаріших замків на території України. Замок має унікальну архітектуру та розташований на
-                        березі
-                        річки Уж, надаючи йому заворожливий вигляд. Місто також славиться своєю музичною та художньою
-                        спадщиною. В Ужгороді можна знайти численні музеї,
-                        галереї, театри та фестивалі, що відображають різні аспекти культури і мистецтва. Загалом,
-                        Ужгород -
-                        це чарівне місто, яке поєднує історію, культуру і природу, створюючи унікальну
-                        атмосферу для тих, хто відвідує його.</p>
+                    <h2 class="featurette-heading">About the city</h2>
+                    <p class="lead"><b>Uzhhorod -</b> a fascinating city located in the west of Ukraine, on the border
+                        with
+                        four countries: Slovakia, Poland, Hungary and Romania. Its rich
+                        historical heritage and multicultural spirit add a special flavor to this place.
+                        Uzhhorod is famous for its unique architecture, variety of cultural customs
+                        and traditions, as well as the natural beauty that surrounds it from all sides. The city offers
+                        guests and residents will have an unforgettable experience thanks to its historical and modern
+                        monuments
+                        entertainment and hospitality of his people. It is one of the main architectural monuments of
+                        the city
+                        Uzhgorodskyi
+                        the castle, which dates back to the 9th century and is one
+                        from the oldest castles on the territory of Ukraine. The castle has a unique architecture and is
+                        located on
+                        shore
+                        of the Uzh river, giving it a mesmerizing look. The city is also famous for its music and art
+                        heritage In Uzhhorod you can find numerous museums,
+                        galleries, theaters and festivals reflecting various aspects of culture and art. In general,
+                        Uzhhorod -
+                        it is a magical city that combines history, culture and nature, creating a unique
+                        atmosphere for those who visit it.</p>
                 </div>
                 <div class="col-md-5 right">
                     <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
@@ -294,12 +298,14 @@
 
             <div class="row featurette">
                 <div class="col-md-7 order-md-2 right">
-                    <h2 class="featurette-heading">Визначні місця</h2>
-                    <p class="lead">Серед найвідоміших місць Ужгорода є його замок, костел, синагога та інші
-                        архітектурні
-                        пам'ятки. У 1646
-                        році під егідою Ватикану проголошено Ужгородську унію та утворено греко-католицьку церкву на
-                        Закарпатті.
+                    <h2 class="featurette-heading">Highlights</h2>
+                    <p class="lead">Among the most famous places of Uzhgorod are its castle, church, synagogue and
+                        others
+                        architectural
+                        attractions. In 1646
+                        year, under the auspices of the Vatican, the Uzhgorod Union was proclaimed and the Greek
+                        Catholic Church was formed on
+                        Transcarpathia.
                     </p>
                 </div>
                 <div class="col-md-5 order-md-1 left">
@@ -313,25 +319,32 @@
 
             <div class="row featurette" id="history">
                 <div class="col-md-7 left">
-                    <h2 class="featurette-heading">Історія</h2>
-                    <p class="lead">Засноване у IX столітті. Місто тимчасово перебувало під владою Угорщини, а згодом —
-                        Австро-Угорщини. Було
-                        тривалий час фортецею роду Другетів. Ужгород розвивався як промисловий та культурний центр
-                        Закарпаття. У
-                        1919 році був столицею Підкарпатської Русі у складі Чехословаччини, за результатами першого
-                        Віденського
-                        арбітражу 1938 року став частиною Хортистської Угорщини, у 1945 році увійшов до складу УРСР, з
+                    <h2 class="featurette-heading">History</h2>
+                    <p class="lead">Founded in the 9th century. The city was temporarily under the rule of Hungary, and
+                        later -
+                        Austria-Hungary. It was
+                        for a long time the fortress of the Druget family. Uzhhorod developed as an industrial and
+                        cultural center
+                        Transcarpathia. IN
+                        In 1919, it was the capital of Subcarpathian Rus as part of Czechoslovakia, according to the
+                        results of the first
+                        of Vienna
+                        arbitration in 1938 became part of Khortyst Hungary, in 1945 became part of the Ukrainian SSR,
+                        with
                         1991
-                        року
-                        — у складі Незалежної України. Герб Ужгорода — офіційно затверджений рішенням Ужгородської
-                        міської
-                        ради від 14 червня 1990 року. Являє
-                        собою німецький щит на синьому полі якого зображено, як із землі ростуть три золоті виноградні
-                        лози,
-                        що
-                        перетинають одна одну, з трьома листочками і двома гронами винограду на них. Виноградна лоза в
-                        символіці міста відома з 1635 року, коли місто використовувало печатку з малюнком
-                        виноградного куща з трьома лозами та двома гронами. Герб на печатці обрамлював напис: "Sigillum
+                        year
+                        — as part of Independent Ukraine. The coat of arms of Uzhgorod is officially approved by the
+                        decision of Uzhgorod
+                        city
+                        Council dated June 14, 1990. Appears
+                        itself is a German shield on a blue field, which depicts three golden vineyards growing from the
+                        ground
+                        vines,
+                        what
+                        cross each other, with three leaves and two bunches of grapes on them. Grapevine in
+                        symbol of the city has been known since 1635, when the city used a seal with a picture
+                        vine with three vines and two clusters. The coat of arms on the seal framed the inscription:
+                        "Sigillum
                         civitatis Ungvariensis".</p>
                 </div>
                 <div class="col-md-5 right">
@@ -348,20 +361,21 @@
                     <div class="col">
                         <div class="card shadow-sm" style="height: 425px;">
                             <img class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Эскиз"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                                 preserveAspectRatio="xMidYMid slice" focusable="false" src="../Data/Images/18.jpg">
-                            <title>Міст</title>
+                            <title>Bridge</title>
                             <div class="card-body">
-                                <p class="card-text text-dark">Колись “Втрачений Ужгород” вже писав про історію
-                                    сучасного
-                                    пішохідного
-                                    мосту та його попередника – так званого Великого мосту....</p>
+                                <p class="card-text text-dark">Once upon a time, "Lost Uzhhorod" already wrote about
+                                    history
+                                    modern
+                                    pedestrian
+                                    bridge and its predecessor - the so-called Great Bridge...</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a type="button" class="btn btn-sm btn-outline-secondary text-dark"
-                                            href="Pages/historyBridgePage.html">Перегляд</a>
+                                            href="Pages/historyBridgePage.html">View</a>
                                     </div>
-                                    <small class="text-muted">Міст</small>
+                                    <small class="text-muted">Bridge</small>
                                 </div>
                             </div>
                         </div>
@@ -370,21 +384,21 @@
                     <div class="col">
                         <div class="card shadow-sm" style="height: 425px;">
                             <img class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Эскиз"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                                 preserveAspectRatio="xMidYMid slice" focusable="false" src="../Data/Images/7.jpg">
-                            <title>Назва міста</title>
+                            <title>City name</title>
                             <div class="card-body">
-                                <p class="card-text text-dark">Історія Ужгорода - одного із найстаровинніших міст в
-                                    Україні та
-                                    Європі,
-                                    бере свій початок
-                                    у сивій давнині....</p>
+                                <p class="card-text text-dark">History of Uzhhorod - one of the oldest cities in
+                                    Ukraine and
+                                    Europe,
+                                    begins
+                                    in ancient times....</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a type="button" class="btn btn-sm btn-outline-secondary text-dark"
-                                            href="Pages/historyNamePage.html">Перегляд</a>
+                                            href="Pages/historyNamePage.html">View</a>
                                     </div>
-                                    <small class="text-muted">Назва міста</small>
+                                    <small class="text-muted">City name</small>
                                 </div>
                             </div>
                         </div>
@@ -393,20 +407,22 @@
                     <div class="col">
                         <div class="card shadow-sm" style="height: 425px;">
                             <img class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Эскиз"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                                 preserveAspectRatio="xMidYMid slice" focusable="false" src="../Data/Images/26.jpg">
-                            <title>Назва міста</title>
+                            <title>City name</title>
                             <div class="card-body">
-                                <p class="card-text text-dark">Замок є найдавнішою і найціннішою історико-архітектурною
-                                    спорудою
-                                    міста. Від назви замку Унгвар (замок на річці) найменувалося й місто (на початку XX
-                                    ст....</p>
+                                <p class="card-text text-dark">The castle is the oldest and most valuable historical and
+                                    architectural
+                                    building
+                                    cities The city was also named after the Ungvar castle (castle on the river) (at the
+                                    beginning of the 20th century).
+                                    Article...</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a type="button" class="btn btn-sm btn-outline-secondary text-dark"
-                                            href="Pages/historyCastlePage.html">Перегляд</a>
+                                            href="Pages/historyCastlePage.html">View</a>
                                     </div>
-                                    <small class="text-muted">Замок</small>
+                                    <small class="text-muted">Lock</small>
                                 </div>
                             </div>
                         </div>
@@ -415,18 +431,19 @@
                     <div class="col">
                         <div class="card shadow-sm" style="height: 425px;">
                             <img class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Эскиз"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                                 preserveAspectRatio="xMidYMid slice" focusable="false" src="../Data/Images/27.jpg">
-                            <title>Міст</title>
+                            <title>Bridge</title>
                             <div class="card-body">
-                                <p class="card-text text-dark">Площа була зведена фактично на болоті, яке постійно
-                                    затоплювало водами Ужа. Ще у XVII столітті будинків там не було взагалі....</p>
+                                <p class="card-text text-dark">The square was actually built on a permanent swamp
+                                    flooded with waters of the Uzh. Back in the 17th century, there were no houses there
+                                    at all...</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a type="button" class="btn btn-sm btn-outline-secondary text-dark"
-                                            href="Pages/historyPetefiPage.html">Перегляд</a>
+                                            href="Pages/historyPetefiPage.html">View</a>
                                     </div>
-                                    <small class="text-muted">Шандор Петефі</small>
+                                    <small class="text-muted">Shandor Petefi</small>
                                 </div>
                             </div>
                         </div>
@@ -435,19 +452,20 @@
                     <div class="col">
                         <div class="card shadow-sm" style="height: 425px;">
                             <img class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Эскиз"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                                 preserveAspectRatio="xMidYMid slice" focusable="false" src="../Data/Images/28.jpg">
-                            <title>Назва міста</title>
+                            <title>City name</title>
                             <div class="card-body">
-                                <p class="card-text text-dark">Меморіальний будинок-музей народного художника України
-                                    Федора Манайла — музейний заклад художньо-меморіального спрямування в Ужгороді....
+                                <p class="card-text text-dark">Memorial building-museum of the People's Artist of
+                                    Ukraine
+                                    Fedora Manayla is an art-memorial museum in Uzhhorod....
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a type="button" class="btn btn-sm btn-outline-secondary text-dark"
-                                            href="Pages/historyManayloPage.html">Перегляд</a>
+                                            href="Pages/historyManayloPage.html">View</a>
                                     </div>
-                                    <small class="text-muted">Манайло</small>
+                                    <small class="text-muted">Manaylo</small>
                                 </div>
                             </div>
                         </div>
@@ -456,18 +474,19 @@
                     <div class="col">
                         <div class="card shadow-sm" style="height: 425px;">
                             <img class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Эскиз"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                                 preserveAspectRatio="xMidYMid slice" focusable="false" src="../Data/Images/29.jfif">
-                            <title>Назва міста</title>
+                            <title>City name</title>
                             <div class="card-body">
-                                <p class="card-text text-dark">У першій половині XVII ст. на цьому місці стояли хатини
-                                    міщан. Володар міста Іван X Другет вирішив переселити в Ужгород....</p>
+                                <p class="card-text text-dark">In the first half of the 17th century. there were huts on
+                                    this placetownspeople The lord of the city Ivan X Druget decided to move to
+                                    Uzhhorod...</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a type="button" class="btn btn-sm btn-outline-secondary text-dark"
-                                            href="Pages/historySoborPage.html">Перегляд</a>
+                                            href="Pages/historySoborPage.html">View</a>
                                     </div>
-                                    <small class="text-muted">Кафедральний собор</small>
+                                    <small class="text-muted">Cathedral</small>
                                 </div>
                             </div>
                         </div>
@@ -476,19 +495,20 @@
                     <div class="col">
                         <div class="card shadow-sm" style="height: 425px;">
                             <img class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Эскиз"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                                 preserveAspectRatio="xMidYMid slice" focusable="false" src="../Data/Images/30.jfif">
-                            <title>Міст</title>
+                            <title>Bridge</title>
                             <div class="card-body">
-                                <p class="card-text text-dark">Перші відомості про православну громаду Ужгорода датовані
-                                    1575 р. Тоді мовилося про парафіяльний дім, а з 1578 р. – і
-                                    про храм неподалік від Мал....</p>
+                                <p class="card-text text-dark">The first information about the Orthodox community of
+                                    Uzhhorod is dated
+                                    1575. Then there was talk of a parish house, and from 1578 - and
+                                    about the temple near Mal....</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a type="button" class="btn btn-sm btn-outline-secondary text-dark"
-                                            href="Pages/historyPravoslavniPage.html">Перегляд</a>
+                                            href="Pages/historyPravoslavniPage.html">View</a>
                                     </div>
-                                    <small class="text-muted">Православна громада Ужгорода</small>
+                                    <small class="text-muted">Orthodox community of Uzhhorod</small>
                                 </div>
                             </div>
                         </div>
@@ -497,25 +517,26 @@
                     <div class="col">
                         <div class="card shadow-sm" style="height: 425px;">
                             <img class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Эскиз"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                                 preserveAspectRatio="xMidYMid slice" focusable="false" src="../Data/Images/31.png">
-                            <title>Назва міста</title>
+                            <title>City name</title>
                             <div class="card-body">
-                                <p class="card-text text-dark">Звідси видно панораму набережної Ужа. Навесні 1944 р.
-                                    євреї Закарпаття пережили демографічну катастрофу, після якої....</p>
+                                <p class="card-text text-dark">From here you can see the panorama of the Uzh embankment.
+                                    In the spring of 1944
+                                    the Jews of Transcarpathia experienced a demographic catastrophe, after which...</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a type="button" class="btn btn-sm btn-outline-secondary text-dark"
-                                            href="Pages/historyFylarmoniaPage.html">Перегляд</a>
+                                            href="Pages/historyFylarmoniaPage.html">View</a>
                                     </div>
-                                    <small class="text-muted">Філармонія</small>
+                                    <small class="text-muted">Philharmonic</small>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div  id="contact"></div>
+            <div id="contact"></div>
         </div>
 
         <section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb">
@@ -534,37 +555,37 @@
                             <div class="py-md-5">
                                 <div class="row justify-content-start pb-3">
                                     <div class="col-md-12 heading-section ftco-animate fadeInUp ftco-animated">
-                                        <span class="subheading">Більше інформації про автора</span>
-                                        <h2 class="mb-4">Белейканич Єлизавета
-                                            Тіборівна</h2>
+                                        <span class="subheading">More information about the author</span>
+                                        <h2 class="mb-4">Elizaveta Beleikanych
+                                            Tiborivna</h2>
                                         <div style="visibility: hidden;">
                                             <hr>
                                             <hr>
                                             <hr>
                                         </div>
                                         <ul class="about-info mt-4 px-md-0 px-2">
-                                            <li class="d-flex"><span>Ім'я: Белейканич Єлизавета
-                                                    Тіборівна</span></li>
-                                                    <div style="visibility: hidden;">
-                                                        <hr>
-                                                    </div>
-                                            <li class="d-flex"><span>Дата народження: 9 Листопада,
-                                                    2007</span></li>
-                                                    <div style="visibility: hidden;">
-                                                        <hr>
-                                                    </div>
-                                            <li class="d-flex"><span>Адреса: м.Ужгород</span></li>
+                                            <li class="d-flex"><span>Name: Elizaveta Beleykanych
+                                                    Tiborivna</span></li>
                                             <div style="visibility: hidden;">
                                                 <hr>
                                             </div>
-                                            <li class="d-flex"><span>Пошта:</span> <a
+                                            <li class="d-flex"><span>Date of birth: November 9,
+                                                    2007</span></li>
+                                            <div style="visibility: hidden;">
+                                                <hr>
+                                            </div>
+                                            <li class="d-flex"><span>Address: Uzhgorod</span></li>
+                                            <div style="visibility: hidden;">
+                                                <hr>
+                                            </div>
+                                            <li class="d-flex"><span>Mail:</span> <a
                                                     href="mailto:prouzhorod022@gmail.com"
                                                     style="color: blue;"><u>prouzhorod022@gmail.com</u></a></p>
                                             </li>
                                             <div style="visibility: hidden;">
                                                 <hr>
                                             </div>
-                                            <li class="d-flex"><span>Телефон: +380 99 640 0950</span></li>
+                                            <li class="d-flex"><span>Phone: +380 99 640 0950</span></li>
                                             <div style="visibility: hidden;">
                                                 <hr>
                                                 <hr>
@@ -575,7 +596,7 @@
                             </div>
                             <section>
                                 <div class="p center-content">
-                                    <h2>Компанія спонсор</h2>
+                                    <h2>Company sponsor</h2>
                                     <img src="../Data/Images/15.png" style="max-width: 30%;">
                                 </div>
                             </section>
@@ -595,14 +616,15 @@
 
     <section>
         <div class="bottom">
-            <h2>Контакти</h2>
-            <p>Адреса: вул. Грушевського, 2, Ужгород, Україна</p>
-            <p>Телефон: +380 99 640 0950</p>
-            <p>Наша пошта: <a href="mailto:prouzhorod022@gmail.com"
+            <h2>Contacts</h2>
+            <p>Address: st. Hrushevsky, 2, Uzhgorod, Ukraine</p>
+            <p>Telephone: +380 99 640 0950</p>
+            <p>Our mail: <a href="mailto:prouzhorod022@gmail.com"
                     style="color: blue;"><u>prouzhorod022@gmail.com</u></a></p>
-            <h3>Ми в:</h3>
+            <h3>We are in:</h3>
             <div class="links">
-                <a title="facebook" target="_blank" href="https://www.facebook.com/profile.php?id=61554309443191&viewas=100000686899395"><img
+                <a title="facebook" target="_blank"
+                    href="https://www.facebook.com/profile.php?id=61554309443191&viewas=100000686899395"><img
                         src="../Data/Images/19.png"></a>
                 <a title="Instagram" target="_blank" href="https://www.instagram.com/prouzhorod/?hl=en"><img
                         src="../Data/Images/20.png"></a>
@@ -613,7 +635,7 @@
     </section>
     <footer>
         <div class="bottom">
-            <p>&copy; 2023 Місто Ужгород</p>
+            <p>&copy; 2023 City of Uzhhorod</p>
         </div>
     </footer>
 </body>
