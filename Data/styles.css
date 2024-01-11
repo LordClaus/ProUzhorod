@@ -213,14 +213,8 @@ h1 {
 .p {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: #f0f0f0;
     background-size: cover;
     font-size: 20px;
-    margin-top: 5px;
-    /* Відступи між контейнерами */
-    margin-bottom: 5px;
-    /* Відступи між контейнерами */
 }
 
 /* Стилі для CTA-кнопки */
