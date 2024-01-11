@@ -16,9 +16,12 @@
 #languageDropdownMenu {
     display: none;
     position: absolute;
-    background-color: white;
-    border: 1px solid white;
+    border: 0px solid white;
     padding: 5px;
+}
+
+#languageDropdown {
+    border: 0px solid white;
 }
 
 .dropdown-item:hover + #languageDropdownMenu,
@@ -412,6 +415,14 @@ img {
 
 .dark-theme .bottom {
     background-color: #1f1f1f;
+}
+
+.dark-theme .dropdown-menu {
+    background-color: #111;
+}
+
+.dark-theme .nav-item:hover, .dark-theme .dropdown-item:hover {
+    background-color: #1a1a1a;
 }
 
 .dark-theme .container-fluid {
