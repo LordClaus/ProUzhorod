@@ -2,130 +2,144 @@
 <html lang="en">
 
 <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>ProUzhhorod</title>
-     <link rel="stylesheet" type="text/css" href="../Data/styles.css">
-     <link rel="icon" href="../Data/Images/6.png" type="image/x-icon">
-     <!-- Bootstrap CSS (jsDelivr CDN) -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-     <!-- Bootstrap Bundle JS (jsDelivr CDN) -->
-     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-         crossorigin="anonymous"></script>
-     <script>
-         document.addEventListener('DOMContentLoaded', function () {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProUzhhorod</title>
+    <link rel="stylesheet" type="text/css" href="../Data/styles.css">
+    <link rel="icon" href="../Data/Images/6.png" type="image/x-icon">
+    <!-- Bootstrap CSS (jsDelivr CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8885934714147169"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap Bundle JS (jsDelivr CDN) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
 
 
-             function updateLogoImage() {
-                 const logoImage = document.getElementById('logo-image');
-                 const isDarkTheme = document.body.classList.contains('dark-theme');
+            function updateLogoImage() {
+                const logoImage = document.getElementById('logo-image');
+                const isDarkTheme = document.body.classList.contains('dark-theme');
 
-                 if (isDarkTheme) {
-                     logoImage.src = '../Data/Images/24.png';
-                 } else {
-                     logoImage.src = '../Data/Images/25.png';
-                 }
-             }
+                if (isDarkTheme) {
+                    logoImage.src = '../Data/Images/24.png';
+                } else {
+                    logoImage.src = '../Data/Images/25.png';
+                }
+            }
 
-             const toggleSwitch = document.getElementById("switch");
+            const toggleSwitch = document.getElementById("switch");
 
-             const currentTheme = localStorage.getItem("theme");
-             if (currentTheme) {
-                 document.body.classList.add(currentTheme);
-                 if (currentTheme === "dark-theme") {
-                     toggleSwitch.checked = true;
-                 }
-             }
+            const currentTheme = localStorage.getItem("theme");
+            if (currentTheme) {
+                document.body.classList.add(currentTheme);
+                if (currentTheme === "dark-theme") {
+                    toggleSwitch.checked = true;
+                }
+            }
 
-             toggleSwitch.addEventListener("change", function () {
-                 if (this.checked) {
-                     document.body.classList.add("dark-theme");
-                     localStorage.setItem("theme", "dark-theme");
-                 } else {
-                     document.body.classList.remove("dark-theme");
-                     localStorage.setItem("theme", "");
-                 }
+            toggleSwitch.addEventListener("change", function () {
+                if (this.checked) {
+                    document.body.classList.add("dark-theme");
+                    localStorage.setItem("theme", "dark-theme");
+                } else {
+                    document.body.classList.remove("dark-theme");
+                    localStorage.setItem("theme", "");
+                }
 
-                 updateLogoImage();
-             });
+                updateLogoImage();
+            });
 
-             window.onload = function () {
-                 const savedTheme = localStorage.getItem("theme");
-                 if (savedTheme && savedTheme === "dark-theme") {
-                     document.body.classList.add("dark-theme");
-                     toggleSwitch.checked = true;
-                 }
+            window.onload = function () {
+                const savedTheme = localStorage.getItem("theme");
+                if (savedTheme && savedTheme === "dark-theme") {
+                    document.body.classList.add("dark-theme");
+                    toggleSwitch.checked = true;
+                }
 
-                 updateLogoImage();
-             };
+                updateLogoImage();
+            };
 
-         });
-     </script>
+        });
+    </script>
 </head>
 
 <body>
-     <div class="container-fluid fixed-top">
-         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-             <a href="../Main.html"
-                 class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                 <svg class="bi me-2" width="40" height="32">
-                     <use xlink:href="#bootstrap"></use>
-                 </svg>
-                 <img src="../Data/Images/25.png" height="50px" id="logo-image" class="d-inline-block align-text-top">
-                 <h2 class="m-0">ProUzhhorod</h2>
-             </a>
-             <ul class="nav nav-pills">
-                 <li class="nav-item"><a class="nav-link text-dark" href="../Main.html">About the city</a></li>
-                 <li class="nav-item"><a class="nav-link text-dark" href="../map.html">Map of Uzhhorod</a></li>
-                 <li class="nav-item"><a class="nav-link text-dark" href="../mapAirRade.html">Air Raid Map</a>
-                 </li>
-                 <li class="nav-item"><a class="nav-link text-dark" href="#contact">More</a></li>
-             </ul>
-         </header>
-     </div>
+    <div class="container-fluid fixed-top">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="../Main.html"
+                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+                <img src="../Data/Images/25.png" height="50px" id="logo-image" class="d-inline-block align-text-top">
+                <h2 class="m-0">ProUzhhorod</h2>
+            </a>
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a class="nav-link text-dark" href="../Main.html">About the city</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="../map.html">Map of Uzhhorod</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="../mapAirRade.html">Air Raid Map</a>
+                </li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#contact">More</a></li>
+            </ul>
+        </header>
+    </div>
 
-     <header style="height: 200px; color: #fff; padding-top: 120px; visibility: hidden;">
-         <div class="scrolled">
-             <h1>About us</h1>
-         </div>
-     </header>
+    <header style="height: 200px; color: #fff; padding-top: 120px; visibility: hidden;">
+        <div class="scrolled">
+            <h1>About us</h1>
+        </div>
+    </header>
 
-     <main class="container">
-         <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
-             <div class="col-md-6 px-0">
-                 <h1 class="display-4 fst-italic">Bridge</h1>
-             </div>
-         </div>
+    <main class="container">
+        <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+            <div class="col-md-6 px-0">
+                <h1 class="display-4 fst-italic">Bridge</h1>
+            </div>
+        </div>
 
-         <div class="row g-5">
-             <div class="col-md-8">
-                 <h3 class="pb-4 mb-4 fst-italic border-bottom">
-                     History
-                 </h3>
+        <div class="row g-5">
+            <div class="col-md-8">
+                <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                    History
+                </h3>
 
-                 <article class="blog-post">
-                     <h2 class="blog-post-title">Where it all started</h2>
-                     <p> Once upon a time, "Lost Uzhhorod" already wrote about the history of the modern pedestrian bridge and its predecessor
-                         - the so-called Great Bridge, blown up in the fall of 1944, when Hungarian and German troops
-                         were leaving the city. Then we only briefly mentioned the person who designed the new pedestrian crossing
-                         bridge and managed the work on its construction. Now we want to tell more about Ivan Shlesinger
-                         - he was already too interesting and extraordinary personality.</p>
-                     <p>HansSchlesinger was born into the family of German engineer Friedrich Schlesinger. Friedrich was honored
-                        honored to receive the Imperial Order of Franz Joseph and personal thanks from the Emperor for being successful
-                        drainage works on large marshy areas of Austria-Hungary. In addition to the order that Franz Joseph
+                <article class="blog-post">
+                    <h2 class="blog-post-title">Where it all started</h2>
+                    <p> Once upon a time, "Lost Uzhhorod" already wrote about the history of the modern pedestrian
+                        bridge and its predecessor
+                        - the so-called Great Bridge, blown up in the fall of 1944, when Hungarian and German troops
+                        were leaving the city. Then we only briefly mentioned the person who designed the new pedestrian
+                        crossing
+                        bridge and managed the work on its construction. Now we want to tell more about Ivan Shlesinger
+                        - he was already too interesting and extraordinary personality.</p>
+                    <p>HansSchlesinger was born into the family of German engineer Friedrich Schlesinger. Friedrich was
+                        honored
+                        honored to receive the Imperial Order of Franz Joseph and personal thanks from the Emperor for
+                        being successful
+                        drainage works on large marshy areas of Austria-Hungary. In addition to the order that Franz
+                        Joseph
                         awarded citizens who distinguished themselves by patriotism, professional success or inventions
-                        for the benefit of the fatherland, on January 26, 1907, Friedrich Schlesinger received possession of land in a small
-                        to the Slovak village of Černá (the Hungarian name at the time was Ágcsárné, the Slovak name was Černá). According to some
-                        according to the data, together with the honorary imperial order, the engineer Friedrich Schlesinger received the title
+                        for the benefit of the fatherland, on January 26, 1907, Friedrich Schlesinger received
+                        possession of land in a small
+                        to the Slovak village of Černá (the Hungarian name at the time was Ágcsárné, the Slovak name was
+                        Černá). According to some
+                        according to the data, together with the honorary imperial order, the engineer Friedrich
+                        Schlesinger received the title
                         baron, but the descendants have no documentary evidence of that, so they prefer
                         consider it a family legend.</p>
                     <p>
-                        Friedrich Schlesinger's son Hans was born in Sarajevo on December 16, 1893. In addition to Hans, there were others in the family
-                        three children: a boy and two girls. Unfortunately, nothing is known about Hans' mother, he himself never
-                        did not tell the children about her. We only know that the whole family came to small Cherna (even in 1944
-                        In 2015, only 468 residents lived in the village, and at the beginning of the last century there could have been even fewer
+                        Friedrich Schlesinger's son Hans was born in Sarajevo on December 16, 1893. In addition to Hans,
+                        there were others in the family
+                        three children: a boy and two girls. Unfortunately, nothing is known about Hans' mother, he
+                        himself never
+                        did not tell the children about her. We only know that the whole family came to small Cherna
+                        (even in 1944
+                        In 2015, only 468 residents lived in the village, and at the beginning of the last century there
+                        could have been even fewer
                         inhabitants) not immediately when Frederick got possession of the land, but in later years.</p>
                     <hr>
                 </article>
@@ -133,95 +147,147 @@
                 <article class="blog-post">
                     <h2 class="blog-post-title">Friedrich Schlesinger</h2>
 
-                    <p>Nothing is known about the school education of Hans, or Janos, as he was called in the times of Austria-Hungary.
-                        He studied in Sarajevo, probably received a musical education there (since childhood he played the piano well
-                        violins). His first education was military (there is evidence that even before the First World War, Janos
-                        graduated from the Vienna Academy of Military Applied Sciences, but his relatives do not know about it
-                        confirmed data), and already during the First World War he traveled from Sarajevo in the rank of an officer. IN
-                        he participated in the war as a bridge engineer. But he received an engineer's diploma already after the First
-                        of the world - when he studied at the Faculty of Civil Engineering of the Budapest Technical University.</p>
-                    <p>Apparently, after completing his studies in Budapest, Janos came to live with his parents in Czerna. It is not known how
+                    <p>Nothing is known about the school education of Hans, or Janos, as he was called in the times of
+                        Austria-Hungary.
+                        He studied in Sarajevo, probably received a musical education there (since childhood he played
+                        the piano well
+                        violins). His first education was military (there is evidence that even before the First World
+                        War, Janos
+                        graduated from the Vienna Academy of Military Applied Sciences, but his relatives do not know
+                        about it
+                        confirmed data), and already during the First World War he traveled from Sarajevo in the rank of
+                        an officer. IN
+                        he participated in the war as a bridge engineer. But he received an engineer's diploma already
+                        after the First
+                        of the world - when he studied at the Faculty of Civil Engineering of the Budapest Technical
+                        University.</p>
+                    <p>Apparently, after completing his studies in Budapest, Janos came to live with his parents in
+                        Czerna. It is not known how
                         and why, but fate brought the young specialist to Czechoslovakia's Uzhhorod. His family is here
                         bought a house on the then Rakotsi Street (a complex was built in its place during Soviet times
-                        "Edelweiss"), another one - on the then Hlyboka Street (now it is Koshytska Street), as well as large allotments
-                        lands and vineyards near the airport. It is known that in the building on Rakotsi Street (now Voloshina)
-                        Janos's aunt, and later his sisters, also lived there. It was there that the engineer lived as an ardent bachelor
+                        "Edelweiss"), another one - on the then Hlyboka Street (now it is Koshytska Street), as well as
+                        large allotments
+                        lands and vineyards near the airport. It is known that in the building on Rakotsi Street (now
+                        Voloshina)
+                        Janos's aunt, and later his sisters, also lived there. It was there that the engineer lived as
+                        an ardent bachelor
                         up to 42 years old.</p>
                     <p>Once in the mid-30s, Janos decided to go to a store in the center of Uzhhorod to buy new
                         gloves There he saw a beautiful woman whom he liked very much. He did not meet
-                        her, did not know who she was. After that, he began to visit that store often, and bought almost all of them
+                        her, did not know who she was. After that, he began to visit that store often, and bought almost
+                        all of them
                         gloves, but he didn't meet the woman who fell in his heart there. After some time,
-                        managing the construction of Minayska Street (as was the correct name of Janos Schlesinger's position in those
+                        managing the construction of Minayska Street (as was the correct name of Janos Schlesinger's
+                        position in those
                         times, his descendants do not know), the engineer saw two boys in pretty white suits
-                        quietly stole two "cubes" of cobblestones and carried them somewhere. Yanosh went to the neighboring one for small thefts
+                        quietly stole two "cubes" of cobblestones and carried them somewhere. Yanosh went to the
+                        neighboring one for small thefts
                         Vuzka Street (it is still located parallel to Shvabska Street) to a solid two-story
-                        house, and when he went into the yard to have a conversation with his parents, he saw the same beautiful woman
-                        a woman from a shop. It turned out that it was the boys' mother, seven years younger than him, divorced
+                        house, and when he went into the yard to have a conversation with his parents, he saw the same
+                        beautiful woman
+                        a woman from a shop. It turned out that it was the boys' mother, seven years younger than him,
+                        divorced
                         Milada Pacek is a Czech from Moravia.</p>
                     <p>Milada came to Uzhgorod in the 1920s with her first husband, who was a furrier, i.e.
-                        a craftsman who works with fur. The couple had their own shop in Uzhgorod, built a house on Vuzka Street
-                        street, but family life did not work out, and the couple divorced. Pacek returned to the Czech Republic, and
-                        Milada Patskova is an active member of "Sokol" and the Czechoslovak Tu ClubRistiv - remained to live with
-                        children in Uzhgorod. The woman was also interested in Janos Schlesinger. One more thing: he was extraordinary
+                        a craftsman who works with fur. The couple had their own shop in Uzhgorod, built a house on
+                        Vuzka Street
+                        street, but family life did not work out, and the couple divorced. Pacek returned to the Czech
+                        Republic, and
+                        Milada Patskova is an active member of "Sokol" and the Czechoslovak Tu ClubRistiv - remained to
+                        live with
+                        children in Uzhgorod. The woman was also interested in Janos Schlesinger. One more thing: he was
+                        extraordinary
                         kind, intelligent, promising, wealthy, knew all the contemporary elite of Subcarpathian Rus,
-                        moreover, he treated Milada's sons from his first marriage very well. In 1935, the couple got married.</p>
-                    <p>Friedrich Schlesinger really dreamed of grandchildren, although an astrologer once told him that he would have grandchildren in his lifetime
-                        can't wait And so it happened: before the birth of Yanosh's first son, he did not live for several weeks.
+                        moreover, he treated Milada's sons from his first marriage very well. In 1935, the couple got
+                        married.</p>
+                    <p>Friedrich Schlesinger really dreamed of grandchildren, although an astrologer once told him that
+                        he would have grandchildren in his lifetime
+                        can't wait And so it happened: before the birth of Yanosh's first son, he did not live for
+                        several weeks.
                         The little boy was named Friedrich in honor of his grandfather. Looking ahead, let's say that
-                        Fridješ, as he was called in the family, suffered from an incurable disease at the time and lived only 20
+                        Fridješ, as he was called in the family, suffered from an incurable disease at the time and
+                        lived only 20
                         years.</p>
                     <p>Daughter Milada was the second joint child of the Schlesingers. Although her father wanted her to
                         devoted her life to music (the girl successfully played the piano from the age of 5), Milada
                         also became a builder, was awarded the title "Honored Builder of Ukraine".</p>
                     <p>Thirdly, the Schlesingers had a boy, Mykhailo, who in adulthood became one of the most famous
-                        of modern Ukrainian scientists, a well-known cybernetician, professor of the Physical and Technical Institute of NTUU
+                        of modern Ukrainian scientists, a well-known cybernetician, professor of the Physical and
+                        Technical Institute of NTUU
                         "KPI", chief researcher of the International Scientific and Educational Information Center
-                        technologies and systems, a recognized specialist in the field of image processing and pattern recognition,
-                        in addition, he twice became a laureate of the State Prize (in 1988 – the State Prize of the Ukrainian SSR, and in
+                        technologies and systems, a recognized specialist in the field of image processing and pattern
+                        recognition,
+                        in addition, he twice became a laureate of the State Prize (in 1988 – the State Prize of the
+                        Ukrainian SSR, and in
                         1997 – State Prize of Ukraine). Mykhailo Ivanovych currently lives in Kyiv and continues to work
                         science.</p>
-                    <p>Janos Schlesinger's children say that their father never divided his children into his own and his wife's, he loved and
+                    <p>Janos Schlesinger's children say that their father never divided his children into his own and
+                        his wife's, he loved and
                         raised them equally, helped Milada's sons from his first marriage to play the violin.
-                        When they were rowdy, my mother would send everyone to my father's office on the second floor. Milada Ivanovna
-                        now he remembers one of the methods of punishment used by his father. He was laying one of the boys
-                        face down on a large drawing board, while another was given a dog whip and ordered to beat his brother
+                        When they were rowdy, my mother would send everyone to my father's office on the second floor.
+                        Milada Ivanovna
+                        now he remembers one of the methods of punishment used by his father. He was laying one of the
+                        boys
+                        face down on a large drawing board, while another was given a dog whip and ordered to beat his
+                        brother
                         with a whip in the place "where the back loses its noble name." Then he changed the brothers.
-                        Milada, the youngest, was never beaten in the family, because beating a woman is unacceptable. Her punishment was to stand and
+                        Milada, the youngest, was never beaten in the family, because beating a woman is unacceptable.
+                        Her punishment was to stand and
                         to see how brothers are deservedly received.</p>
-                    <p>By the way, the office in the building on Vuzkii Street was a special place for Janos Schlesinger.
+                    <p>By the way, the office in the building on Vuzkii Street was a special place for Janos
+                        Schlesinger.
                         A large drawing board, a bulky arithmetic meter, a variety of drawing tools and
-                        measurements, and also a huge library, the decoration of which was a multi-volume German encyclopedia
-                        Brockhaus - this is how his children remembered the office of the talented engineer. By the way, back in 1940
-                        Janos Schlesinger received a Doctor of Science degree from the Technical University of Budapest. WITH
-                        of that event, the family has preserved a commemorative photo in which Janos can be seen with medals on his chest. Now
+                        measurements, and also a huge library, the decoration of which was a multi-volume German
+                        encyclopedia
+                        Brockhaus - this is how his children remembered the office of the talented engineer. By the way,
+                        back in 1940
+                        Janos Schlesinger received a Doctor of Science degree from the Technical University of Budapest.
+                        WITH
+                        of that event, the family has preserved a commemorative photo in which Janos can be seen with
+                        medals on his chest. Now
                         the children cannot say what the awards are, but they testify that Janos Schlesinger was
-                        He was repeatedly awarded either for his participation in the First World War or for his professional achievements.
+                        He was repeatedly awarded either for his participation in the First World War or for his
+                        professional achievements.
                     </p>
-                    <p>It is not known for certain what projects Janos Schlesinger worked on in Subcarpathian Rus. Children
-                        they only know that he designed the road from Uzhgorod to Perechyn, Minayska street, other roads and
-                        bridges throughout the territory of the region during Czechoslovakia and Hungary. It is not surprising that when in Uzhgorod u
+                    <p>It is not known for certain what projects Janos Schlesinger worked on in Subcarpathian Rus.
+                        Children
+                        they only know that he designed the road from Uzhgorod to Perechyn, Minayska street, other roads
+                        and
+                        bridges throughout the territory of the region during Czechoslovakia and Hungary. It is not
+                        surprising that when in Uzhgorod u
                         In 1944, all the bridges were blown up, the authorities turned to him for advice.
                         Old builders say that Schlesinger in Transcarpathia was for everyone in the first Soviet years
                         a man-legend. He knew well all the designers, engineers and architects of the "old school", a
                         they always respectfully addressed him in Hungarian as "doktor úr", i.e. "Mr. Doctor".</p>
                     <p>And Uzhgorod builders for many years in a row retold the story of how "Fridrichovich"
                         invited together with Soviet and Czech engineers to inspect the blown-up Masarykiv
-                        (transport) bridge. It was necessary to calculate the permissible level on the spotloads The young
-                        experts armed themselves with arithometers and logarithmic rulers and calculated something for a long time. AND
-                        Schlesinger took a notebook and quickly counted everything in his head. When the experts then compared the results,
-                        it turned out that the doctor was wrong by only 2 percent, which is quite acceptable in construction. All of them
-                        those present were amazed when they looked into the notebook with Schlesinger's notes. They said: well, that's understandable,
-                        and it is clear, but what kind of coefficient is this? Schlesinger said simply: this is my coefficient. And explain
+                        (transport) bridge. It was necessary to calculate the permissible level on the spotloads The
+                        young
+                        experts armed themselves with arithometers and logarithmic rulers and calculated something for a
+                        long time. AND
+                        Schlesinger took a notebook and quickly counted everything in his head. When the experts then
+                        compared the results,
+                        it turned out that the doctor was wrong by only 2 percent, which is quite acceptable in
+                        construction. All of them
+                        those present were amazed when they looked into the notebook with Schlesinger's notes. They
+                        said: well, that's understandable,
+                        and it is clear, but what kind of coefficient is this? Schlesinger said simply: this is my
+                        coefficient. And explain
                         then refused. After this incident, he was called a genius in the city, who even looked similar
                         on another extraordinary scientist - Einstein. Both always had tousled gray hair,
-                        unheard of intelligence and were, according to the conviction of other people, a little strange.</p>
+                        unheard of intelligence and were, according to the conviction of other people, a little strange.
+                    </p>
                     <p>However, this did not prevent Ivan Schlesinger (in Soviet times, he mocked the fact that everyone
-                        documents suddenly became Ivan Fedorovych) and in the pre- and post-war years he was friends with many
+                        documents suddenly became Ivan Fedorovych) and in the pre- and post-war years he was friends
+                        with many
                         famous townspeople. He was friends with Zoltan Sholtes, Desideriy Zador, Petr Sova,
                         Yosyp Bokshai (he even offered Schlesinger to buy a picture from him in which he depicted
-                        construction of the brainchild of an engineer – a new pedestrian bridge in Uzhgorod, but the family could not afford
-                        to allow the purchase of canvas) and others. Everyone who remembers him will definitely note that
-                        somehow Ivan Schlesinger got along in all spheres of life, it was easy to talk about politics with him,
+                        construction of the brainchild of an engineer – a new pedestrian bridge in Uzhgorod, but the
+                        family could not afford
+                        to allow the purchase of canvas) and others. Everyone who remembers him will definitely note
+                        that
+                        somehow Ivan Schlesinger got along in all spheres of life, it was easy to talk about politics
+                        with him,
                         art, engineering, literature. He knew German, French, Hungarian and Czech perfectly
                         language, spoke Russian well.</p>
                     <hr>
@@ -231,93 +297,142 @@
                     <h2 class="blog-post-title">Canvas by Iosyp Bokshay, which depicts a pedestrian bridge in progress
                         summary</h2>
                     <p>As for his unusualness and interesting worldview, these features can be illustrated by several
-                        facts Once, already in the times of the USSR, Ivan Shlesinger, who then worked in the design office,
-                        sent on a business trip to Rakhov. They did not give money for the trip, and there was almost no money at home. To
+                        facts Once, already in the times of the USSR, Ivan Shlesinger, who then worked in the design
+                        office,
+                        sent on a business trip to Rakhov. They did not give money for the trip, and there was almost no
+                        money at home. To
                         Rakhova, the engineer, arrived, completed the work, but had no money to return home, so he left
-                        Rahova to Uzhgorod on foot. He walked for two weeks, marking himself in every settlement on the way, in order to
+                        Rahova to Uzhgorod on foot. He walked for two weeks, marking himself in every settlement on the
+                        way, in order to
                         prove the reasons for your absence at work.</p>
-                    <p>Ivan Shlesinger did not become a Doctor of Sciences of the USSR. When he was asked to confirm his academic degree,
-                        it turned out that, in addition to a highly specialized exam and an exam on knowledge of a foreign language, the doctor had
-                        show excellent knowledge of the history of the VKPB. The engineer flatly refused to take this exam,
-                        motivating this by the fact that in 1940, while receiving the degree of Doctor of Sciences in Budapest, he and his colleagues
+                    <p>Ivan Shlesinger did not become a Doctor of Sciences of the USSR. When he was asked to confirm his
+                        academic degree,
+                        it turned out that, in addition to a highly specialized exam and an exam on knowledge of a
+                        foreign language, the doctor had
+                        show excellent knowledge of the history of the VKPB. The engineer flatly refused to take this
+                        exam,
+                        motivating this by the fact that in 1940, while receiving the degree of Doctor of Sciences in
+                        Budapest, he and his colleagues
                         took a traditional oath in which he pledged not to engage in politics. Maybe some similar ones
                         convictions forced Janos Schlesinger to officially renounce in 1943
                         inheritance from his father of the Order of Franz Joseph.</p>
-                    <p>The engineer was generally a man of principle. He even won a prize for his most famous pedestrian project
-                        bridge in Uzhhorod - he simply gave it to the workers who worked on the construction site. wife at home
-                        of course, she was indignant, and her husband explained: this is not a bonus, this is an insult, a penny for this kind of work
+                    <p>The engineer was generally a man of principle. He even won a prize for his most famous pedestrian
+                        project
+                        bridge in Uzhhorod - he simply gave it to the workers who worked on the construction site. wife
+                        at home
+                        of course, she was indignant, and her husband explained: this is not a bonus, this is an insult,
+                        a penny for this kind of work
                         he will not accept.</p>
-                    <p>He considered the light but very strong pedestrian bridge, erected in 1948, to be his own achievement with
+                    <p>He considered the light but very strong pedestrian bridge, erected in 1948, to be his own
+                        achievement with
                         due to the fact that it had to be built without the required amount of materials and equipment.
-                        In fact, he invented a form that required a minimum of materials, and at the same time looked easy and
-                        was strong It should also not be forgotten that Ivan Schlesinger was given the goal of building a temporary bridge,
-                        so the fact that he has been serving the townspeople with faith and truth for 69 years can be considered quite a merit
+                        In fact, he invented a form that required a minimum of materials, and at the same time looked
+                        easy and
+                        was strong It should also not be forgotten that Ivan Schlesinger was given the goal of building
+                        a temporary bridge,
+                        so the fact that he has been serving the townspeople with faith and truth for 69 years can be
+                        considered quite a merit
                         our local engineering genius.</p>
                     <hr>
                 </article>
 
                 <article class="blog-post">
                     <h2 class="blog-post-title">A toll was collected for crossing the bridge</h2>
-                    <p>In ancient times, Uzh flowed in the outskirts of the city in several branches that flowed into the Latoritsa River. The currentthe channel is partially artificial, dug back in 1333. In the 17th century, the Uzha arm was filled in,
-                        which flowed in the direction of Dravtsi-Baranyntsi. Thus, the only main channel remained, which is the river
+                    <p>In ancient times, Uzh flowed in the outskirts of the city in several branches that flowed into
+                        the Latoritsa River. The currentthe channel is partially artificial, dug back in 1333. In the
+                        17th century, the Uzha arm was filled in,
+                        which flowed in the direction of Dravtsi-Baranyntsi. Thus, the only main channel remained, which
+                        is the river
                         continues even today, Uzhgorod historian, head of the archeology department tells "Novyna".
-                        Yosyp Kobal of the Transcarpathian Museum of Local Lore. Of course, repeatedly over the centuries
-                        changed its course, and traces of this have been preserved to this day in the topography of the left bank of the city.
+                        Yosyp Kobal of the Transcarpathian Museum of Local Lore. Of course, repeatedly over the
+                        centuries
+                        changed its course, and traces of this have been preserved to this day in the topography of the
+                        left bank of the city.
                     </p>
-                    <p>Uzhhorod arose around Zamkova Hill, which was washed by Uzh and its branches from all sides. Communication with
-                        surrounding territories was carried out precisely through bridges. And although the first descriptions of them belong only to
-                        17th century, there is no doubt, says the historian, that they existed much earlier: this was required by development
+                    <p>Uzhhorod arose around Zamkova Hill, which was washed by Uzh and its branches from all sides.
+                        Communication with
+                        surrounding territories was carried out precisely through bridges. And although the first
+                        descriptions of them belong only to
+                        17th century, there is no doubt, says the historian, that they existed much earlier: this was
+                        required by development
                         trade, the need for communication with different parts of the city or manor lands. IN
                         In 1361, at least two bridges existed in Uzhgorod: a large and a small one. The first of them
                         apparently, history suggests, and was the most ancient. He crossed already at about the place
-                        where the pedestrian bridge now stands, and connected the old town on the right bank of the Uzh with the new town
-                        (it arose at the end of the 16th - beginning of the 17th century - on the left bank). In 1691, one of the streets on the right bank
-                        that's how it was called - Mostova (later Velikomostova), because it led to the big (main) bridge across
+                        where the pedestrian bridge now stands, and connected the old town on the right bank of the Uzh
+                        with the new town
+                        (it arose at the end of the 16th - beginning of the 17th century - on the left bank). In 1691,
+                        one of the streets on the right bank
+                        that's how it was called - Mostova (later Velikomostova), because it led to the big (main)
+                        bridge across
                         the Uzh River (now a pedestrian bridge).</p>
-                    <p>During floods or when the bridge for some reason had a partially destroyed connection with the banks
+                    <p>During floods or when the bridge for some reason had a partially destroyed connection with the
+                        banks
                         carried out by ferry or boats. However, it was an extremely dangerous job that did not
-                        once ended in tragedy. Already at this time, but obviously earlier, a toll was collected for crossing the bridge
+                        once ended in tragedy. Already at this time, but obviously earlier, a toll was collected for
+                        crossing the bridge
                         duty, explains Yosyp Kobal</p>
-                    <p>The customs office stood on the right bank, on Fentsika Square (now Teatralna). While the owners of the city
-                        were the Drugets, and then Count Miklós Berčeni, then they were the ones who worried about maintaining the bridge
-                        in good condition. Later, in the 18th century, these functions were taken over by the state treasury. Bridges in
-                        at that time, they were built of wood, and therefore they often had to be repaired or replaced. In 1785
-                        the idea of building a stone bridge arose, but it, as it is called, did not take root. Until 1866
-                        The treasury collected a toll from everyone who crossed the bridge, regardless of whether it was a local resident or
-                        stranger. But since 1866, the bridge toll was removed from the residents of Uzhhorod. And on September 30, 1907, his
+                    <p>The customs office stood on the right bank, on Fentsika Square (now Teatralna). While the owners
+                        of the city
+                        were the Drugets, and then Count Miklós Berčeni, then they were the ones who worried about
+                        maintaining the bridge
+                        in good condition. Later, in the 18th century, these functions were taken over by the state
+                        treasury. Bridges in
+                        at that time, they were built of wood, and therefore they often had to be repaired or replaced.
+                        In 1785
+                        the idea of building a stone bridge arose, but it, as it is called, did not take root. Until
+                        1866
+                        The treasury collected a toll from everyone who crossed the bridge, regardless of whether it was
+                        a local resident or
+                        stranger. But since 1866, the bridge toll was removed from the residents of Uzhhorod. And on
+                        September 30, 1907, his
                         canceled completely.</p>
-                    <p>At the beginning of the 19th century. the wooden bridge was built in such a way that it passed slightly at an angle to the modern and
-                        was longer than today. At the same time, temporary bridges appeared - from the end of modern Corzo Street
+                    <p>At the beginning of the 19th century. the wooden bridge was built in such a way that it passed
+                        slightly at an angle to the modern and
+                        was longer than today. At the same time, temporary bridges appeared - from the end of modern
+                        Corzo Street
                         to the so-called Kushnirsky row on the opposite side, where the "Bear Inn" stood. And in 1898
                         the first iron bridge, which had a pedestrian transport purpose, was built with state funds.
-                        The bridge was not at all similar to the current one, it resembled a railway bridge - with three huge ones
+                        The bridge was not at all similar to the current one, it resembled a railway bridge - with three
+                        huge ones
                         arched metal trusses and two bulls on which the structure was held. It is him
                         the first city bus ran in 1921. This important object of the city existed
                         infrastructure until 1944, when, retreating, the Germans blew it up (as well as other Uzhhorod
-                        bridges). The remains of the old bridge can still be seen at the bottom of the river, as well as the supports of wooden bridges of the 19th century.
+                        bridges). The remains of the old bridge can still be seen at the bottom of the river, as well as
+                        the supports of wooden bridges of the 19th century.
                     </p>
                     <hr>
                 </article>
 
                 <article class="blog-post">
                     <h2 class="blog-post-title">The current bridge is constantly "in motion"</h2>
-                    <p>Already in Soviet times, says Uzhhorod historian Serhii Fedaka, the banks of the Uzh were united by a modern bridge.
+                    <p>Already in Soviet times, says Uzhhorod historian Serhii Fedaka, the banks of the Uzh were united
+                        by a modern bridge.
                         In 2009, it was decorated with lanterns and flowers. And so the bridge was chosen by lovers,
-                        decorated with metal locks and hearts. Today it is considered the bridge of lovers. They appeared in the city
-                        and traditions related to the bridge. Valentine's Day has been celebrated here for several years in a row.
+                        decorated with metal locks and hearts. Today it is considered the bridge of lovers. They
+                        appeared in the city
+                        and traditions related to the bridge. Valentine's Day has been celebrated here for several years
+                        in a row.
                     </p>
-                    <p>By the way, they wanted to reconstruct the bridge this year. "I planned to completely renew its railings, lights.
-                        Such a bridge would fit better into the architecture of the city than this green-yellow one. Kovku was readyperform our forge "Bezykmeister", Serhiy Bezyk shares his plans. He developed it in the spring
-                        a computer project, which shows how the bridge will look after the work is completed - a little more
-                        lanterns than there are now, and the color scheme is dominated by black with the effect of worn bronze. "I
-                        had a meeting with the mayor and the chief architect. I liked the idea, but it turned out that they didn't like it
+                    <p>By the way, they wanted to reconstruct the bridge this year. "I planned to completely renew its
+                        railings, lights.
+                        Such a bridge would fit better into the architecture of the city than this green-yellow one.
+                        Kovku was readyperform our forge "Bezykmeister", Serhiy Bezyk shares his plans. He developed it
+                        in the spring
+                        a computer project, which shows how the bridge will look after the work is completed - a little
+                        more
+                        lanterns than there are now, and the color scheme is dominated by black with the effect of worn
+                        bronze. "I
+                        had a meeting with the mayor and the chief architect. I liked the idea, but it turned out that
+                        they didn't like it
                         it is necessary... That's why the matter did not progress further," the blacksmith states.</p>
                     <p>Uzhgorod tour guide Vladyslav Tovtin shares with "Noviny" that he was scared as a child:
                         "If you're rude, we'll hand you over to the tar woman sitting on the footbridge." Of course,
                         there was no woman there, but nowadays beggars like to sit there or visiting musicians play. AND
-                        Vladyslav tells tourists that once the bridge was the only one in the city. And that in January 1919
+                        Vladyslav tells tourists that once the bridge was the only one in the city. And that in January
+                        1919
                         military skirmishes often occurred on it. The fact is that the right bank was in Czech
-                        occupation, and the left bank - in Hungarian. It didn't last long (about a month), but the battles between the soldiers
+                        occupation, and the left bank - in Hungarian. It didn't last long (about a month), but the
+                        battles between the soldiers
                         were.</p>
                     <hr>
                 </article>
@@ -325,15 +440,22 @@
                 <article class="blog-post">
                     <h2 class="blog-post-title">Wall of Death</h2>
                     <p>Of course, the tour guides cannot ignore the strong stone wall, which is visible from both
-                        sides of the bridge. The already mentioned historian Yosyp Kobal says that the beginning of its construction belongs to
-                        60-70s of the 19th century. This was caused, on the one hand, by the catastrophic consequences of the 1867 flood
-                        year, and on the other - by the construction of a railway bridge (now it is a transport bridge on Ankudinova St., and
-                        a new railway bridge was built higher up the Uzha river). On the left bank, the wall began to be built in 1868
-                        year, and on the right - in 1879. However, the August flood in 1893 swept it away, so it had to be
+                        sides of the bridge. The already mentioned historian Yosyp Kobal says that the beginning of its
+                        construction belongs to
+                        60-70s of the 19th century. This was caused, on the one hand, by the catastrophic consequences
+                        of the 1867 flood
+                        year, and on the other - by the construction of a railway bridge (now it is a transport bridge
+                        on Ankudinova St., and
+                        a new railway bridge was built higher up the Uzha river). On the left bank, the wall began to be
+                        built in 1868
+                        year, and on the right - in 1879. However, the August flood in 1893 swept it away, so it had to
+                        be
                         to rebuild. By the way, that part of the stone wall of the right bank, which is located above
                         bridge, was called the Wall of Death. Accidents often happened in this place, and quite a few
-                        residents of Uzhhorod met their death here. Suicides who decided to end their lives also went here
-                        the stormy waters of the then still full-water Uzh. Today, it is almost impossible to drown here.</p>
+                        residents of Uzhhorod met their death here. Suicides who decided to end their lives also went
+                        here
+                        the stormy waters of the then still full-water Uzh. Today, it is almost impossible to drown
+                        here.</p>
                     <hr>
                 </article>
             </div>
@@ -377,11 +499,14 @@
                     style="color: blue;"><u>prouzhorod022@gmail.com</u></a></p>
             <h3>We are in:</h3>
             <div class="links">
-                <a title="facebook" target="_blank" href="https://www.facebook.com/profile.php?id=61554309443191&viewas=100000686899395"><img
+                <a title="facebook" target="_blank"
+                    href="https://www.facebook.com/profile.php?id=61554309443191&viewas=100000686899395"><img
                         src="../Data/Images/19.png"></a>
                 <a title="Instagram" target="_blank" href="https://www.instagram.com/prouzhorod/?hl=en"><img
                         src="../Data/Images/20.png"></a>
-                <a title="Twitter" target="_blank" href="https://twitter.com/ProUzhorod"><imgsrc="../Data/Images/21.png"></a>
+                <a title="Twitter" target="_blank" href="https://twitter.com/ProUzhorod">
+                    <imgsrc=".. /Data/Images/21.png">
+                </a>
             </div>
         </div>
     </section>
