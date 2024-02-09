@@ -13,20 +13,21 @@
     margin: 0;
 }
 
-#languageDropdownMenu {
+#languageDropdownMenu, #languageDropdown {
     display: none;
     position: absolute;
     border: 0px solid white;
     padding: 5px;
 }
 
-#languageDropdown {
-    border: 0px solid white;
+.dropdown-item:hover + #languageDropdownMenu,
+#languageDropdownMenu:hover, .dropdown-item:hover + #languageDropdown,
+#languageDropdown:hover {
+    display: block;
 }
 
-.dropdown-item:hover + #languageDropdownMenu,
-#languageDropdownMenu:hover {
-    display: block;
+.dropdown-menu {
+    left: -40%;
 }
 
 body {
