@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>ProUzhhorod</title>
+     <link rel="stylesheet" type="text/css" href="../Data/styles.css">
+     <link rel="icon" href="../Data/Images/6.png" type="image/x-icon">
+     <!-- Bootstrap CSS (jsDelivr CDN) -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8885934714147169"
+         crossorigin="anonymous"></script>
+     <!-- Bootstrap Bundle JS (jsDelivr CDN) -->
+     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+         crossorigin="anonymous"></script>
+     <script>
+         document.addEventListener('DOMContentLoaded', function () {
+
+
+             function updateLogoImage() {
+                 const logoImage = document.getElementById('logo-image');
+                 const isDarkTheme = document.body.classList.contains('dark-theme');
+
+                 if (isDarkTheme) {
+                     logoImage.src = '../Data/Images/24.png';
+                 } else {
+                     logoImage.src = '../Data/Images/25.png';
+                 }
+             }
+
+             const toggleSwitch = document.getElementById("switch");
+
+             const currentTheme = localStorage.getItem("theme");
+             if (currentTheme) {
+                 document.body.classList.add(currentTheme);
+                 if (currentTheme === "dark-theme") {
+                     toggleSwitch.checked = true;
+                 }
+             }
+
+             toggleSwitch.addEventListener("change", function () {
+                 if (this.checked) {
+                     document.body.classList.add("dark-theme");
+                     localStorage.setItem("theme", "dark-theme");
+                 } else {
+                     document.body.classList.remove("dark-theme");
+                     localStorage.setItem("theme", "");
+                 }
+
+                 updateLogoImage();
+             });
+
+             window.onload = function () {
+                 const savedTheme = localStorage.getItem("theme");
+                 if (savedTheme && savedTheme === "dark-theme") {
+                     document.body.classList.add("dark-theme");
+                     toggleSwitch.checked = true;
+                 }
+
+                 updateLogoImage();
+             };
+
+         });
+     </script>
+</head>
+
+<body>
+     <div class="container-fluid fixed-top">
+         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+             <a href="../Main.html"
+                 class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                 <svg class="bi me-2" width="40" height="32">
+                     <use xlink:href="#bootstrap"></use>
+                 </svg>
+                 <img src="../Data/Images/25.png" height="50px" id="logo-image" class="d-inline-block align-text-top">
+                 <h2 class="m-0">ProUzhhorod</h2>
+             </a>
+             <ul class="nav nav-pills">
+                 <li class="nav-item"><a class="nav-link text-dark" href="../Main.html">About the city</a></li>
+                 <li class="nav-item"><a class="nav-link text-dark" href="../map.html">Map of Uzhhorod</a></li>
+                 <li class="nav-item"><a class="nav-link text-dark" href="../mapAirRade.html">Air Raid Map</a>
+                 </li>
+                 <li class="nav-item"><a class="nav-link text-dark" href="#contact">More</a></li>
+             </ul>
+         </header>
+     </div>
+
+     <header style="height: 200px; color: #fff; padding-top: 120px; visibility: hidden;">
+         <div class="scrolled">
+             <h1>About us</h1>
+         </div>
+     </header>
+
+     <main class="container">
+         <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+             <div class="col-md-6 px-0">
+                 <h1 class="display-4 fst-italic">Maria Theresa Square</h1>
+             </div>
+         </div>
+
+         <div class="row g-5">
+             <div class="col-md-8">
+
+                 <article class="blog-post">
+
+                     <p> Maria Theresia Square is a public square with a memorial complex in the historic center of the city
+                         Uzhgorod, located next to the Uzhhorod Cathedral, was created in honor of the empress
+                         Maria Theresa. The square was built on the initiative of Alen Panov and Mukachivska Greek Catholic Church
+                         diocese[1][2]. During the construction of the Maria Theresa Square, the 200-year-old stone one was destroyed
+                         mur[3][4], which was accompanied by significant public resonance[5] and a negative assessment by specialists</p>
+                         <hr>
+                         <p>Establishment of the park
+                             In 2004, Uzhhorod diplomat and lawyer Alen Panov together with the Greek Catholic bishop
+                             Milan Shashik of Mukachevo initiated the creation of the Maria Theresa Square[1]. In 2013, Panov et
+                             Bishop Milan announced a competition for the development of the square project[2]. The conditions of the competition provided for
+                             unification of separate plots that belonged to Alen Panov and were at his disposal
+                             of the Greek Catholic diocese[1], into a single space with a square and the construction of a memorial complex
+                             in the buffer zone of the architectural monument of national importance — the Uzhhorod Cathedral
+                             cathedral [2].
+    
+                             Part of the square, with the monument to Maria Theresa and the memorial complex belonging to Alain
+                             Sir, was opened for public use on January 5, 2015, and the other
+                             part, with a statue of the Virgin Mary belonging to the Greek Catholic Diocese - June 28, 2016
+                             year
+    
+                             According to the founders of the square, its construction is intended to serve the achievement of two goals:
+    
+                             Arrangement of the territory, which will provide a panoramic view of the Cathedral
+                             Immortalization of Maria Theresa and other historical figures who made the greatest contribution to development
+                             Castle Quarter[15]
+                             The square is named after the empress of the Holy Roman Empire, the queen of Hungary and
+                             Archduchess of Austria Maria Theresa of Habsburg-Lorraine (1717-1780). It is the period of her reign
+                             became one of the most significant in the formation of the city. In those days, Uzhhorod turned into
+                             regional center. It was here that the capital of the newly formed Greek Catholic diocese was located,
+                             which united several contemporary committees of historical Transcarpathia. Monument to Maria Theresa
+                             (sculptor - Bohdan Tomashevskyi) is the central figure of the square.
+    
+                             Memorial complex of the square
+                             The memorial complex of the square was built with the participation of artists Anatoly and Natalia Tesovsky,
+                             designers Ivan and Anna Ivanysh, landscape designer Viktor Meshko and project manager Mykhailo
+                             collected In the so-called "Pantheon of the Castle Quarter" there are relief portraits of historical figures
+                             persons who have done a lot for the development of the city of Uzhhorod. Including:
+    
+                             Stephen I the Holy (967-1038) was the first Hungarian king who accepted baptism and laid the foundations
+                             of the Hungarian state.
+                             Charles Robert (1288—1342) — King of Hungary and titular King of Galicia and Vladimir, originally from
+                             of Naples Belonged to the famous French dynasty of Anjou, which ruled many European countries
+                             states Uzhgorod was handed over to the Drugets.
+                             Philip Druget (1290-1327) was a count, the closest ally of Karl Robert, palatine of Hungary. Italian
+                             of Franco-Provençal origin, who laid the foundation of the Druget dynasty, which owned Uzhhorod
+                             more than 350 years. The Uzhhorod Castle acquired its modern appearance precisely during the reign of this family.
+                             Miklos Bercheny (1665—1725) was a count, one of the most famous owners of the Uzhhorod Castle, who
+                             turned the city into an important political and cultural center of Central Europe.
+                             Andriy Bachynskyi (1732—1809) was the first full-fledged Greek Catholic bishop, under whom Uzhhorod
+                             became the center of the diocese. His activities laid the foundation for the powerful development of the city, as until
+                             Uzhgorod Castle and the entire Castle Quarter were handed over to the diocese.</p>
+                     </article>
+                 </div>
+    
+                 <div class="col-md-4">
+                     <div class="position-sticky" style=" padding-top: 120px; top: 2rem;">
+                         <div class="p-4 mb-3 bg-light rounded">
+                             <h4 class="fst-italic text-dark">About the author</h4>
+                             <p class="mb-0 text-dark">Elizaveta Tiborivna Beleikanych</p>
+                         </div>
+    
+                         <div class="p-4">
+                             <h4 class="fst-italic">List of other stories</h4>
+                             <ol class="list-unstyled mb-0">
+                                 <li><a href="historyBridgePage.html">Bridge</a></li>
+                                 <li><a href="historyNamePage.html">City Name</a></li>
+                                 <li><a href="historyCastlePage.html">Castle</a></li>
+                                 <li><a href="historyPetefiPage.html">Shandor Petefi</a></li>
+                                 <li><a href="historyManayloPage.html">Manaylo</a></li>
+                                 <li><a href="historySoborPage.html">Cathedral</a></li>
+                                 <li><a href="historyPravoslavniPage.html">Orthodox community of Uzhhorod</a></li>
+                                 <li><a href="historyFylarmoniaPage.html">Philarmonia</a></li>
+                             </ol>
+                         </div>
+                     </div>
+                 </div>
+         </main>
+    
+         <div style="visibility: hidden;">
+             <hr>
+             <hr>
+             <hr>
+         </div>
+    
+         <section>
+             <div class="bottom">
+                 <h2>Contacts</h2>
+                 <p>Address: st. Hrushevsky, 2, Uzhgorod, Ukraine</p>
+                 <p>Telephone: +380 99 640 0950</p>
+                 <p>Our mail: <a href="mailto:prouzhorod022@gmail.com"
+                         style="color: blue;"><u>prouzhorod022@gmail.com</u></a></p>
+                 <h3>We are in:</h3>
+                 <div class="links">
+                     <a title="facebook" target="_blank"
+                         href="https://www.facebook.com/profile.php?id=61554309443191&viewas=100000686899395"><img
+                             src="../Data/Images/19.png"></a>
+                     <a title="Instagram" target="_blank" href="https://www.instagram.com/prouzhorod/?hl=en"><img
+                             src="../Data/Images/20.png"></a>
+                     <a title="Twitter" target="_blank" href="https://twitter.com/ProUzhorod"><img
+                             src="../Data/Images/21.png"></a>
+                 </div>
+             </div>
+         </section>
+         <footer>
+             <div class="bottom">
+                 <p>&copy; 2023 City of Uzhhorod</p>
+             </div>
+         </footer>
+    </body>
+    
+    </html>

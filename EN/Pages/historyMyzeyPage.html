@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>ProUzhhorod</title>
+     <link rel="stylesheet" type="text/css" href="../Data/styles.css">
+     <link rel="icon" href="../Data/Images/6.png" type="image/x-icon">
+     <!-- Bootstrap CSS (jsDelivr CDN) -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8885934714147169"
+         crossorigin="anonymous"></script>
+     <!-- Bootstrap Bundle JS (jsDelivr CDN) -->
+     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+         crossorigin="anonymous"></script>
+     <script>
+         document.addEventListener('DOMContentLoaded', function () {
+
+
+             function updateLogoImage() {
+                 const logoImage = document.getElementById('logo-image');
+                 const isDarkTheme = document.body.classList.contains('dark-theme');
+
+                 if (isDarkTheme) {
+                     logoImage.src = '../Data/Images/24.png';
+                 } else {
+                     logoImage.src = '../Data/Images/25.png';
+                 }
+             }
+
+             const toggleSwitch = document.getElementById("switch");
+
+             const currentTheme = localStorage.getItem("theme");
+             if (currentTheme) {
+                 document.body.classList.add(currentTheme);
+                 if (currentTheme === "dark-theme") {
+                     toggleSwitch.checked = true;
+                 }
+             }
+
+             toggleSwitch.addEventListener("change", function () {
+                 if (this.checked) {
+                     document.body.classList.add("dark-theme");
+                     localStorage.setItem("theme", "dark-theme");
+                 } else {
+                     document.body.classList.remove("dark-theme");
+                     localStorage.setItem("theme", "");
+                 }
+
+                 updateLogoImage();
+             });
+
+             window.onload = function () {
+                 const savedTheme = localStorage.getItem("theme");
+                 if (savedTheme && savedTheme === "dark-theme") {
+                     document.body.classList.add("dark-theme");
+                     toggleSwitch.checked = true;
+                 }
+
+                 updateLogoImage();
+             };
+
+         });
+     </script>
+</head>
+
+<body>
+     <div class="container-fluid fixed-top">
+         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+             <a href="../Main.html"
+                 class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                 <svg class="bi me-2" width="40" height="32">
+                     <use xlink:href="#bootstrap"></use>
+                 </svg>
+                 <img src="../Data/Images/25.png" height="50px" id="logo-image" class="d-inline-block align-text-top">
+                 <h2 class="m-0">ProUzhhorod</h2>
+             </a>
+             <ul class="nav nav-pills">
+                 <li class="nav-item"><a class="nav-link text-dark" href="../Main.html">About the city</a></li>
+                 <li class="nav-item"><a class="nav-link text-dark" href="../map.html">Map of Uzhhorod</a></li>
+                 <li class="nav-item"><a class="nav-link text-dark" href="../mapAirRade.html">Air Raid Map</a>
+                 </li>
+                 <li class="nav-item"><a class="nav-link text-dark" href="#contact">More</a></li>
+             </ul>
+         </header>
+     </div>
+
+     <header style="height: 200px; color: #fff; padding-top: 120px; visibility: hidden;">
+         <div class="scrolled">
+             <h1>About us</h1>
+         </div>
+     </header>
+
+     <main class="container">
+         <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+             <div class="col-md-6 px-0">
+                 <h1 class="display-4 fst-italic">Museum of Folk Architecture and Life</h1>
+             </div>
+         </div>
+
+         <div class="row g-5">
+             <div class="col-md-8">
+
+                 <article class="blog-post">
+
+                     <p> In the very heart of old Ungvar, on the slope of Castle Hill, not far from Uzhgorod Castle,
+                         one of the most unique open-air museums in the country is located - the Transcarpathian People's Museum
+                         of architecture and everyday life, or the Old Village museum in Uzhhorod. All his exhibits can be seen under
+                         in the open sky: these are the amazing structures of the lowland and mountainous regions of the region: Rusyns-Valleyans, Romania,
+                         Hungarians, Boiks and Hutsuls.
+
+                         The history of the museumThe Old Village Museum in Uzhhorod officially began its work at the end of June 1970. For exposure
+                         the most characteristic structures for each Transcarpathian ethno-group are selected in the open-air museum (the region for the entire
+                         its history was part of 22 (!) states) and transported to Uzhhorod. This is one of the first open-air museums in
+                         Ukraine, because before that there was only a similar museum in the city of Pereyaslav-Khmelnytskyi. First his
+                         they wanted to build outside the city, near Horyanska Rotunda, but decided on Zamkova
+                         mountains Do not be afraid of the past of this area - the area where the open-air museum is located, in the 19th century
+                         in. was used as a cemetery and was called "Graveyard". The museum in the city was nicknamed "Old
+                         village", because when you get here, you seem to be really transported to a real Transcarpathian village.
+
+                         In general, today in the open-air museum you can see 7 manors, 6 residential premises, a church, a school,
+                         kish pantry, valilo (laundry), mill, forge and other masterpieces of national heritage - in total more than 20
+                         buildings of various purposes and about 14,000 various exhibits! Each of them has its own
+                         a unique, unrepeatable story.
+
+                         Old Village Museum in Uzhhorod: only authentic exhibits
+                         The first to appear in the open-air museum was a hut from the village of Guklyve, in the Volovetsky district. At first it was
+                         a dusty hut with an open hearth. In the past, the entire peasant family lived in such houses
+                         Ruthenians-Valleyans.
+
+                         In the museum you can also see residential buildings built in the XVIII-XX centuries. Impress and surprise
+                         Boyki houses from the village of Rekyty, in Mizhhirshchyna, and the village of Gusne, Velikobereznyan district.
+                         The latter is known as the "long hut" and belonged to Mykhailo Sverlovych, who, in order to build a house,
+                         worked hard in a mine in America. This house was one of the first to be moved to the museum in 1967.
+
+                         Of particular interest is the town house - a real architectural unique! Today is such a type
+                         Hutsul closed courtyards with premises for sheep and cattle in Transcarpathia
+                         almost not preserved. This is the only architectural Museum "Stare selo" in Uzhhorodian ensemble, in the warehouse
+                         which includes a log house and outbuildings. Hutsulska grazhda comes from the village
+                         Stebny in Rakhiv Oblast and resembles a small wooden fortress. Such houses belonged to rich Hutsuls,
+                         the size of the yard and the luxurious interior speak for themselves.
+
+                         The architecture of the ethnic group of Romanians, who still live in some villages of Transcarpathia today, is represented by a house
+                         from the village of Seredne Vodyane (Rakhiv district), and Hungarians - a hut from the village of Vyshkovo in Khust region. One of
+                         among the oldest monuments of folk construction is a house transported from the village of Tybava Svalyavskyi
+                         district This is a typical dwelling in the foothills.
+
+                         In the Transcarpathian interiors, which in the museum reproduce the daily life of Transcarpathians, there are many interesting
+                         exhibits These are ancient household utensils, all kinds of products of folk craftsmen, work tools,
+                         festive and everyday clothes and jewelry. The water mill from the village is also very original
+                         Kolochava (Mezhgorsk District) and a forge from the village of Dubovoe (Tyachiv District).
+
+                         The museum even has its own folk school – brought from the village of Synevyrska Polyana, Mizhhirsky district.
+                         The institution was built in the second half of the 19th century. made of spruce wood using the traditional logging technique.
+                         You will see the benches and tables where the children studied, the blackboards on which they wrote, and the old
+                         teacher accounts.
+
+                         In the open-air museum, you can visit a real inn from 1860, which was brought here from the village of Verkhnii
+                         Bystry of the Mizhhirsky district. There are several rooms inside: the inn itself with a pub,
+                         kitchen, storeroom, master's bedroom, hayloft and anchorage, or overnight accommodation.</p>
+                 </article>
+             </div>
+
+             <div class="col-md-4">
+                 <div class="position-sticky" style=" padding-top: 120px; top: 2rem;">
+                     <div class="p-4 mb-3 bg-light rounded">
+                         <h4 class="fst-italic text-dark">About the author</h4>
+                         <p class="mb-0 text-dark">Elizaveta Tiborivna Beleikanych</p>
+                     </div>
+
+                     <div class="p-4">
+                         <h4 class="fst-italic">List of other stories</h4>
+                         <ol class="list-unstyled mb-0"><li><a href="historyBridgePage.html">Bridge</a></li>
+                            <li><a href="historyNamePage.html">City Name</a></li>
+                            <li><a href="historyCastlePage.html">Castle</a></li>
+                            <li><a href="historyPetefiPage.html">Shandor Petefi</a></li>
+                            <li><a href="historyManayloPage.html">Manaylo</a></li>
+                            <li><a href="historySoborPage.html">Cathedral</a></li>
+                            <li><a href="historyPravoslavniPage.html">Orthodox community of Uzhhorod</a></li>
+                            <li><a href="historyFylarmoniaPage.html">Philarmonia</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <div style="visibility: hidden;">
+        <hr>
+        <hr>
+        <hr>
+    </div>
+
+    <section>
+        <div class="bottom">
+            <h2>Contacts</h2>
+            <p>Address: st. Hrushevsky, 2, Uzhgorod, Ukraine</p>
+            <p>Telephone: +380 99 640 0950</p>
+            <p>Our mail: <a href="mailto:prouzhorod022@gmail.com"
+                    style="color: blue;"><u>prouzhorod022@gmail.com</u></a></p>
+            <h3>We are in:</h3>
+            <div class="links">
+                <a title="facebook" target="_blank"
+                    href="https://www.facebook.com/profile.php?id=61554309443191&viewas=100000686899395"><img
+                        src="../Data/Images/19.png"></a>
+                <a title="Instagram" target="_blank" href="https://www.instagram.com/prouzhorod/?hl=en"><img
+                        src="../Data/Images/20.png"></a>
+                <a title="Twitter" target="_blank" href="https://twitter.com/ProUzhorod"><img
+                        src="../Data/Images/21.png"></a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="bottom">
+            <p>&copy; 2023 City of Uzhhorod</p>
+        </div>
+    </footer>
+</body>
+
+</html>
