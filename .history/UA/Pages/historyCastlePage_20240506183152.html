@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProUzhhorod</title>
+    <link rel="stylesheet" type="text/css" href="../Data/styles.css">
+    <link rel="icon" href="../Data/Images/6.png" type="image/x-icon">
+    <!-- Bootstrap CSS (jsDelivr CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script async src="https://pagead2 .googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8885934714147169"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap Bundle JS (jsDelivr CDN) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+
+            function updateLogoImage() {
+                const logoImage = document.getElementById('logo-image');
+                const isDarkTheme = document.body.classList.contains('dark-theme');
+
+                if (isDarkTheme) {
+                    logoImage.src = '../Data/Images/24.png';
+                } else {
+                    logoImage.src = '../Data/Images/25.png';
+                }
+            }
+
+            const toggleSwitch = document.getElementById("switch");
+
+            const currentTheme = localStorage.getItem("theme");
+            if (currentTheme) {
+                document.body.classList.add(currentTheme);
+                if (currentTheme === "dark-theme") {
+                    toggleSwitch.checked = true;
+                }
+            }
+
+            toggleSwitch.addEventListener("change", function () {
+                if (this.checked) {
+                    document.body.classList.add("dark-theme");
+                    localStorage.setItem("theme", "dark-theme");
+                } else {
+                    document.body.classList.remove("dark-theme");
+                    localStorage.setItem("theme", "");
+                }
+
+                updateLogoImage();
+            });
+
+            window.onload = function () {
+                const savedTheme = localStorage.getItem("theme");
+                if (savedTheme && savedTheme === "dark-theme") {
+                    document.body.classList.add("dark-theme");
+                    toggleSwitch.checked = true;
+                }
+
+                updateLogoImage();
+            };
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid  fixed-top">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="../Main.html"
+                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+                <img src="../Data/Images/25.png" height="50px" id="logo-image" class="d-inline-block align-text-top">
+                <h2 class="m-0">ProUzhhorod</h2>
+            </a>
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a class="nav-link text-dark" href="../Main.html">Про місто</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="../map.html">Карта Ужгорода</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="../mapAirRade.html">Карта повітряних тривог</a>
+                </li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#contact">Більше</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <header style="height: 200px; color: #111; padding-top: 120px; visibility: hidden; @media (max-width: 815й) {
+         padding-top: 170px;
+    }">
+        <div class="scrolled">
+            <h1>Про нас</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+            <div class="col-md-6 px-0">
+                <h1 class="display-4 fst-italic">Замок</h1>
+                <p class="lead my-3">Замок є найдавнішою і найціннішою історико-архітектурною спорудою міста.</p>
+            </div>
+        </div>
+
+        <div class="row g-5">
+            <div class="col-md-8">
+                <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                    Історія
+                </h3>
+
+                <article class="blog-post">
+                    <h2 class="blog-post-title">З чого все починалось</h2>
+
+                    <p> Від назви замку Унгвар (замок на річці) найменувалося й місто (на початку XX ст. назва змінена
+                        на слов'янське
+                        Ужгород).Перші укріплення на Замковій горі сягають у сиву давнину, — згадки про Ужгородське
+                        городище
+                        зустрічаються в дуже давніх документах і хроніках. Про існування укріплення Гунг на час переходу
+                        мадярів у кінці ІХ ст. через карпатські перевали у Тисо-Дунайську низовину свідчить й угорський
+                        літописець ХІІ ст. Анонім у хроніці "Gesta Hungarorum" ("Діяння угорців"): град над рікою
+                        посідав слов'янський князь Лаборець, дружина якого зазнала поразки від угорців, а сам князь,
+                        рятуючись втечею, був спійманий на річці і вбитий, від чого і пішла назва річки — Лаборець (нині
+                        на території Східної Словаччини в Лаборець впадає р. Уж).
+                    </p>
+                    <p>Описи чи зображення тогочасного укріплення не збереглися. Проте відомо, що у VІІІ-ІХ ст. й
+                        особливо у Х-ХІ ст. укріплені городища і забудови навколо них (так звані "гради") були поширені
+                        у західних і східних слов'ян, зокрема на території Київської Русі.</p>
+                    <hr>
+                    <p>Ужгородська фортеця як одна з твердинь на кордонах Київської держави мала такі ж особливості, як
+                        й інші укріплення давньої Українсько-Руської держави, зокрема в Прикарпатті. Тут, наприклад,
+                        стіни, вежі, ворота, мости були з дерева. Фортифікаційна лінія оборони складалася з земляного
+                        валу (ширина — 10-12 м, висота — 7-8 м), рову (глибина — 5-6 м) перед ним, а завершувалась
+                        дерев'яною огорожею ("граждою").
+                    </p>
+                    <p>Міць твердині засвідчує також факт, що у 1086 р. орди половців на чолі з ханом Кутеском так і не
+                        змогли оволодіти нею... Відчайдушно оборонялися захисники фортеці в час золотоординської навали
+                        навесні 1241 р., але не змогли встояти перед ордою — град та інші будівлі міста були зруйновані.
+                    </p>
+                    <p>Після цього спустошливого набігу розпочато будівництво кам'яної фортеці.</p>
+
+                    Вже у документах 1248 р. згадується новий замок Унг (Унгуйвар), який, однак, був зруйнований у 1326
+                    р.</p>
+                    <p>Подальша доля замку тісно пов'язана з історією Ужгорода. На початку ХІV ст. він належав
+                        Ужанському жупану, супротивнику угорського короля Карла Роберта, Петру Петеньку. Після
+                        придушення повстання у 1317 р. під проводом Петенька замок через п'ять років було передано
+                        італійському аристократичному роду французького походження Другетам, які володіли ним до 1690-х
+                        рр., тобто понад 360 років.
+                    </p>
+                    <p>У 1692 р. замок став власністю графа Миколи Берчені, чоловіка Крістіни Другет. Микола Берчені, —
+                        соратник і друг керівника національно-визвольної війни угорського народу 1703-1711 рр. проти
+                        Габсбургів Ференца ІІ Ракоци, — чимало зробив для піднесення в Ужгороді культурного життя.
+                    </p>
+                    <div class="row featurette">
+                        <div class="col-md-7 order-md-2">
+                            <p>За час свого існування замок неодноразово зазнавав військових нападів і штурмів. У 1728
+                                р. тут
+                                була пожежа, внаслідок якої завдано великої шкоди будівлям, зокрема головному корпусу,
+                                третій
+                                поверх якого з тих пір не відновлювався.
+                            </p>
+                            <p>Протягом 1735-1740 рр. замок перебував у володінні барона Ференца Дюлаї, а по його смерті
+                                відійшов до казни.
+                            </p>
+                        </div>
+                        <div class="col-md-5 order-md-1">
+                            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                                width="600" height="auto" xmlns="http://www.w3.org/2000/svg" role="img"
+                                aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"
+                                src="../Data/Images/26.jpg">
+                        </div>
+                    </div>
+                    <p>У 1775 р., на прохання єпископа Андрія Бачинського, австрійська імператриця Марія Терезія
+                        передала замок Мукачівській греко-католицькій єпархії, яка з 1780 р. розмістила у ньому
+                        богословську семінарію (проіснувала тут до 1945 р.).
+                    </p>
+                    <p>Впродовж свого існування фортеця зазнавала багаторазових змін в архітектурі. Зовні замок має
+                        вигляд могутньої оборонної споруди у формі неправильного чотирикутника (трапеції), у кожному
+                        куті якого розміщені бастіони староіталійського типу. Ця архітектурна особливість характерна для
+                        періоду пізнього ренесансу.
+                    </p>
+                    <p>Саме в середині ХVІІ ст. архітектурно-будівельний та оборонний розвиток фортеці було завершено, —
+                        у такому вигляді замок зберігся до наших днів.
+                    </p>
+                    <p>У підземеллях фортеці були каземати. Підвали — найдавніша частина замку, тут можна прослідкувати
+                        залишки старих фундаментів.
+                    </p>
+                    <p>У палаці нараховується понад 40 приміщень. Найбільший, колись рицарський, зал розміщений на
+                        другому поверсі, у ньому відбувалися урочисті події, прийоми гостей, трапези, тощо.</p>
+                    </p>
+                    <p>
+                        Привертає увагу і замкова каплиця, стеля якої розписана на тему релігійних сюжетів в 1857 р.
+                        відомим академічним художником Фердинандом Видрою. Кілька залів оздоблені стильним орнаментом
+                        ХVІІІ — першої половини ХІХ ст.
+                    </p>
+                    <p>
+
+                        До ХVІІІ ст. замок оточував п'ятиярусний сад, засаджений рідкісними квітами, кущами і деревами.
+                        Сад прикрашали статуї і фонтани.
+                    </p>
+                    <p>
+
+                        З кінця 1960-х рр. у замку проводяться реставраційні роботи, внаслідок чого у значній мірі
+                        законсервовані або відновлені аварійні, зруйновані чи втрачені елементи цієї визначної пам'ятки
+                        історії, культури, фортифікації та архітектури Ужгорода.
+                    </p>
+                    <p>
+
+                        З 1947 р. у замку розташований Закарпатський краєзнавчий музей, дегустаційний зал, ресторан.
+                        Іноді проводяться лицарські турніри.
+                    </p>
+                    <p><strong>Час роботи:</strong>
+                        10:00-18:00, понеділок — <strong>вихідний.</strong><br>
+                        <strong>Контакти:</strong>
+                        Закарпатська область
+                        Ужгородський район
+                        м. Ужгород
+                        вул. Капітульна, 33<br>
+                        <strong>Тел.:</strong> +38 (03126) 1-46-09
+                        +38 (03126) 3-44-42
+                    </p>
+                </article>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-sticky" style=" padding-top: 120px; top: 2rem;">
+                    <div class="p-4 mb-3 bg-light rounded">
+                        <h4 class="fst-italic text-dark">Про автора</h4>
+                        <p class="mb-0 text-dark">Белейканич Єлизавета Тіборівна</p>
+                    </div>
+
+                    <div class="p-4">
+                        <h4 class="fst-italic">Список інших історій</h4>
+                        <ol class="list-unstyled mb-0">
+                            <li><a href="historyBridgePage.html">Міст</a></li>
+                            <li><a href="historyNamePage.html">Назва міста</a></li>
+                            <li><a href="historyCastlePage.html">Замок</a></li>
+                            <li><a href="historyPetefiPage.html">Шандор Петефі</a></li>
+                            <li><a href="historyManayloPage.html">Манайло</a></li>
+                            <li><a href="historySoborPage.html">Кафедральний собор</a></li>
+                            <li><a href="historyPravoslavniPage.html">Православна громада Ужгорода</a></li>
+                            <li><a href="historyFylarmoniaPage.html">Філармонія</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <div style="visibility: hidden;">
+        <hr>
+        <hr>
+        <hr>
+    </div>
+
+    <section>
+        <div class="bottom">
+            <h2>Контакти</h2>
+            <p>Адреса: вул. Грушевського, 2, Ужгород, Україна</p>
+            <p>Телефон: +380 99 640 0950</p>
+            <p>Наша пошта: <a href="mailto:prouzhorod022@gmail.com"
+                    style="color: blue;"><u>prouzhorod022@gmail.com</u></a></p>
+            <h3>Ми в:</h3>
+            <div class="links">
+                <a title="facebook" target="_blank"
+                    href="https://www.facebook.com/profile.php?id=61554309443191&viewas=100000686899395"><img
+                        src="../Data/Images/19.png"></a>
+                <a title="Instagram" target="_blank" href="https://www.instagram.com/prouzhorod/?hl=en"><img
+                        src="../Data/Images/20.png"></a>
+                <a title="Twitter" target="_blank" href="https://twitter.com/ProUzhorod"><img
+                        src="../Data/Images/21.png"></a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="bottom">
+            <p>&copy; 2023 Місто Ужгород</p>
+        </div>
+    </footer>
+</body>
+
+</html>
